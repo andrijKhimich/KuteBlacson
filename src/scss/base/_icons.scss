@@ -1,0 +1,55 @@
+.icon-play {
+  width: 28px;
+  height: 28px;
+  fill: $white;
+}
+
+.arrow {
+  width: 30px;
+  height: 1px;
+  @include gradientHor;
+  display: block;
+  position: absolute;
+  transform-origin: center;
+  opacity: .4;
+  transition: width $hover-duration $timing, opacity $hover-duration $timing;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 1px;
+    height: 5px;
+    background-color: $pink;
+    position: absolute;
+    border-radius: 2px;
+  }
+
+  &::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  &_prev {
+    right: 0;
+
+    &::before,
+    &::after {
+      left: 2px;
+    }
+  }
+
+  &_next {
+    left: 0;
+    transform: scale(-1);
+
+    &::before,
+    &::after {
+      left: 2px;
+    }
+  }
+}
