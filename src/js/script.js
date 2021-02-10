@@ -3,6 +3,10 @@ const mainWrapper = document.querySelector('.main-wrapper');
 const testimonialsSlider = document.querySelector('#testimonialsSlider');
 const bannerSlider = document.querySelector('#bannerSlider');
 const storeSlider = document.querySelector('#storeSlider');
+const helpSlider = document.querySelector('#helpSlider');
+const blogSlider = document.querySelector('#blogSlider');
+
+
 
 // const caseSlider = document.querySelector('#caseSlider');
 // const blogSlider = document.querySelector('#blogSlider');
@@ -65,6 +69,34 @@ function initBannerSlider() {
     autoplaySpeed: 10000
   });
 }
+
+
+function initHelpSlider() {
+  $(helpSlider).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: false,
+    fade: false,
+    arrows: false,
+    infinite: false,
+    autoplaySpeed: 10000
+  });
+}
+
+function initBlogSlider() {
+  $(blogSlider).slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: false,
+    fade: false,
+    arrows: true,
+    prevArrow: $('#blogPrev'),
+    nextArrow: $('#blogNext'),
+    infinite: false,
+  });
+}
 // function setInnerHeader() {
 //   logoImg.setAttribute('src', logoWhiteUrl);
 //   logoSource.setAttribute('srcset', logoWhiteUrl);
@@ -101,13 +133,13 @@ function showContent() {
   mainWrapper.classList.remove("js-fadeIn");
 }
 document.addEventListener("DOMContentLoaded", function () {
-
-
   showContent();
   initPartnersSlider();
   initTestimonialsSlider();
   initBannerSlider();
   initStoreSlider();
+  initHelpSlider();
+  initBlogSlider();
   // menuBtn.addEventListener('click', function () {
   //   if (this.classList.contains("active")) {
   //     closeMenu();

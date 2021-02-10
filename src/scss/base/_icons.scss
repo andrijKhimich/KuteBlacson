@@ -2,6 +2,11 @@
   width: 28px;
   height: 28px;
   fill: $white;
+  &_sm {
+    width: 15px;
+    height: 15px;
+    fill: $white;
+  }
 }
 
 .arrow {

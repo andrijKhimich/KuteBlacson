@@ -230,25 +230,25 @@ input {
 
   &::-webkit-input-placeholder {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: $textColor;
   }
 
   &::-moz-placeholder {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: $black;
   }
 
   &:-ms-input-placeholder {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: $black;
   }
 
   &::placeholder {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: $black;
   }
 }
@@ -291,6 +291,7 @@ textarea {
   border-radius: 50%;
   background-color: transparent;
   white-space: nowrap;
+  border: none;
 
   &:hover {
 
@@ -388,6 +389,16 @@ textarea {
     &:hover {
       transform: translate(-50%, 0) scale(.8);
     }
+  }
+
+  &-play_sm {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include gradientVert;
   }
 }
 
@@ -498,6 +509,7 @@ textarea {
   align-items: center;
   color: $pink;
   font-size: 14px;
+
   picture {
     width: 20px;
     margin-right: 15px;

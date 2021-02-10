@@ -15,7 +15,9 @@
 }
 
 /* Слайд */
-.slick-slide {}
+.slick-slide {
+  outline: none;
+}
 
 /* Слайд активный */
 .slick-slide.slick-active {}
