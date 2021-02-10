@@ -7,6 +7,9 @@
   width: 100%;
   z-index: 1;
 
+  @include d(1399) {
+    padding: 20px 0;
+  }
 
   &__row {
     display: flex;
@@ -24,22 +27,83 @@
 
 .nav {
   text-transform: uppercase;
-  margin-right: 115px;
+
+  @include d(767) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100vh;
+    background-color: $white;
+    padding: 100px 0 0 15px;
+    opacity: 0;
+    transition: opacity $hover-duration $timing;
+
+    @include d(575) {
+      width: 100vw;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:before {
+      content: "";
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      filter: blur(10px);
+      background-color: $white;
+      opacity: .6;
+    }
+  }
 
   &-list {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &__item {
+
+    @include d(767) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item,
+    li {
       position: relative;
+      transition: color $hover-duration $timing;
+
+      &:hover {
+        color: $pink;
+
+        &::before {
+          width: 100%;
+        }
+      }
 
       &:not(:last-child) {
         margin-right: 10px;
       }
+
+      &:before {
+        content: "";
+        height: 2px;
+        @include gradientHor;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width $hover-duration $timing;
+      }
     }
 
-    &__link {
+    &__link,
+    a {
       font-size: 15px;
       letter-spacing: 0.08em;
       line-height: 1.733em;
@@ -52,6 +116,31 @@
   width: 21px;
   height: 18px;
   position: relative;
+  display: none;
+
+  @include d(767) {
+    display: inline-block;
+  }
+
+  &.active {
+    .humburger__item {
+      background-color: $pink;
+    }
+
+    .humburger__item:nth-child(2) {
+      opacity: 0;
+    }
+
+    .humburger__item:first-child {
+      transform: rotate(45deg);
+      top: 8px;
+    }
+
+    .humburger__item:last-child {
+      transform: rotate(-45deg);
+      bottom: 8px;
+    }
+  }
 
   &__item {
     height: 2px;
@@ -63,11 +152,14 @@
       width: 100%;
       top: 50%;
       margin-top: -1px;
+      opacity: 1;
+      transition: opacity $hover-duration $timing;
     }
 
     &:first-child,
     &:last-child {
       width: 18px;
+      transition: transform $hover-duration $timing, top $hover-duration $timing, bottom $hover-duration $timing;
     }
 
     &:first-child {
@@ -82,4 +174,6 @@
 
 .logo {
   max-width: 180px;
+  position: relative;
+  z-index: 1;
 }

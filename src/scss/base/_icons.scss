@@ -2,6 +2,12 @@
   width: 28px;
   height: 28px;
   fill: $white;
+
+  @include d(1199) {
+    width: 20px;
+    height: 20px;
+  }
+
   &_sm {
     width: 15px;
     height: 15px;

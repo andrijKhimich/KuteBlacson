@@ -1,6 +1,16 @@
 .hero {
   padding-top: 122px;
   background-color: $heroBg;
+  @include m(1920) {
+    padding-top: 240px;
+  }
+  @include d(1399) {
+    padding-top: 60px;
+  }
+
+  @include d(991) {
+    padding-bottom: 40px;
+  }
 
   &::before {
     content: "";
@@ -27,6 +37,12 @@
       position: absolute;
       bottom: 0;
       left: -80px;
+
+      @include d(1199) {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -37,6 +53,10 @@
     align-items: flex-start;
     height: 100%;
     padding: 40px 0 0 8px;
+
+    @include d(991) {
+      padding: 40px 0;
+    }
 
     p {
       margin-bottom: 26px;
@@ -148,6 +168,14 @@
 .about {
   padding: 80px 0;
 
+  @include d(767) {
+    padding: 40px 0;
+  }
+
+  @include d(575) {
+    padding: 20px 0;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -162,7 +190,6 @@
     top: 0;
     opacity: 0.1;
     border: 1px solid #000000;
-
   }
 
   &::after {
@@ -183,6 +210,10 @@
   &__cta {
     position: relative;
     height: 100%;
+
+    @include d(1199) {
+      margin: 40px 0;
+    }
   }
 
   &__btn {
@@ -190,13 +221,38 @@
     top: 50%;
     left: 50%;
     transform: translate(-47%, -21%);
+
+    @include d(1199) {
+      position: static;
+      transform: translate(0, 0);
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 200px 40px 190px 0;
+    margin: 200px 40px 190px 0;
+
+    @include d(1199) {
+      margin: 100px 0;
+    }
+
+    @include d(767) {
+      margin: 40px 0;
+    }
+
+    @include d(575) {
+      margin: 0 0 40px 0;
+    }
+
+    @include d(575) {
+      display: block;
+
+      .subtitle {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &-text__decription {
@@ -208,10 +264,18 @@
 .testimonials {
   padding: 77px 0;
 
+  @include d(575) {
+    padding: 40px 0;
+  }
+
   &-slider {
     margin: 50px 0;
     padding: 110px 45px 116px 60px;
     position: relative;
+
+    @include d(767) {
+      padding: 80px 15px 66px 20px;
+    }
 
     &::before {
       content: "“";
@@ -250,6 +314,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include d(767) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &__content {
@@ -258,6 +327,11 @@
       position: relative;
       transform: translate(0, 20px);
       transition: transform $hover-duration $timing, opacity $hover-duration $timing;
+
+      @include d(767) {
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
     }
 
     &__text {
@@ -280,12 +354,36 @@
       max-width: 128px;
       margin-right: 50px;
       width: 100%;
+
+      @include d(991) {
+        margin-right: 20px;
+      }
     }
 
     &__title {
       font-size: 58px;
       line-height: 1.18em;
       max-width: fit-content;
+
+      @include d(1399) {
+        font-size: 40px;
+      }
+
+      @include d(1199) {
+        font-size: 34px;
+      }
+
+      @include d(991) {
+        font-size: 32px;
+      }
+
+      @include d(767) {
+        font-size: 30px;
+      }
+
+      @include d(575) {
+        font-size: 28px;
+      }
     }
 
     &__nav {
@@ -294,6 +392,17 @@
       height: 30px;
       width: 10px;
       position: relative;
+
+      @include d(1199) {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: 60px;
+      }
+
+      @include d(991) {
+        margin-top: 20px;
+        margin-right: 140px;
+      }
     }
   }
 }
@@ -322,10 +431,18 @@
     left: 45px;
     width: 100%;
     z-index: 1000;
+
+    @include d(575) {
+      display: none;
+    }
   }
 
   &__img {
     max-width: 320px;
+
+    @include d(1199) {
+      max-width: 240px;
+    }
   }
 
   &-list {
@@ -335,6 +452,10 @@
     top: 60%;
     right: 60px;
 
+    @include d(1199) {
+      font-size: 18px;
+    }
+
     &__item {
       padding: 0 10px;
       background-color: rgba($black, .5);
@@ -343,6 +464,11 @@
 
       &:not(:last-child) {
         margin-right: 17px;
+        margin-bottom: 10px;
+
+        @include d(1199) {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -351,6 +477,14 @@
 .story {
   padding: 130px 0;
   margin-top: -65px;
+
+  @include d(991) {
+    padding: 80px 0;
+  }
+
+  @include d(575) {
+    padding: 40px 0;
+  }
 
   &::before {
     content: "";
@@ -366,9 +500,14 @@
   &__content {
     padding-top: 20px;
 
+    @include d(991) {
+      margin-bottom: 40px;
+    }
+
     p {
       margin: 23px 0;
     }
+
   }
 
   &__play {
@@ -384,16 +523,35 @@
     max-width: 780px;
     margin-right: 0;
     margin-left: auto;
+
+    @include d(991) {
+      max-width: none;
+      margin: 0 -15px;
+    }
   }
 }
 
 .store {
   padding: 117px 0 20px 0;
 
+  @include d(1199) {
+    padding: 80px 0 20px 0;
+  }
+
   &-slider {
     margin: 60px 0;
     padding: 80px 0 76px 110px;
     position: relative;
+
+    @include d(1399) {
+      padding: 40px 0 40px 60px;
+    }
+
+    @include d(1199) {
+      padding: 40px 0 40px 30px;
+      margin: 30px 0;
+
+    }
 
     &::after {
       content: "";
@@ -413,6 +571,11 @@
     &__item {
       display: flex;
       justify-content: space-between;
+
+      @include d(767) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &__video {
@@ -422,6 +585,10 @@
 
       @include d (1500) {
         max-width: 418px;
+      }
+
+      @include d(767) {
+        max-width: 100%;
       }
 
       picture,
@@ -443,9 +610,18 @@
         max-width: 500px;
       }
 
+      @include d(767) {
+        max-width: 100%;
+        padding: 20px 0;
+      }
+
       p {
         margin-bottom: 30px;
         max-width: 350px;
+
+        @include d(767) {
+          max-width: 100%;
+        }
       }
 
       .title-3,
@@ -473,6 +649,23 @@
       position: absolute;
       bottom: 40px;
       right: 120px;
+      z-index: 1;
+
+      @include d(1399) {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-right: 60px;
+        margin-left: auto;
+      }
+
+      @include d(991) {
+        margin-right: 160px;
+      }
+
+      @include d(575) {
+        margin: 0 auto;
+      }
     }
 
     &__play {
@@ -482,6 +675,14 @@
       @include d(1500) {
         left: 120%;
       }
+
+      @include d(1399) {
+        left: 110%;
+      }
+
+      @include d(1199) {
+        left: 50%;
+      }
     }
   }
 }
@@ -489,19 +690,24 @@
 .help {
   padding: 25px 0;
 
+  @include d(992) {
+    padding: 25px 0 0 0;
+  }
+
   &-slider {
     margin: 80px 0;
+
+    @include d(1199) {
+      margin: 40px 0;
+    }
 
     &:hover {
       cursor: grab;
     }
 
-    .slick-track {}
-
     &__item {
       position: relative;
       z-index: 1;
-      // margin-left: -200px;
 
       &_inner {
         // margin-right: 220px;
@@ -515,33 +721,40 @@
       }
 
       &:nth-child(even) {
-        // max-width: 1090px;
-        // min-width: 1090px;
-        // margin-top: -30px;
-
         .help-slider__item_inner {
           max-width: 1090px;
           display: flex;
           align-items: center;
-          // justify-content: space-between;
+
+          @include d(575) {
+            flex-direction: column;
+          }
         }
 
         .help-slider__img {
           padding: 0 50px;
+
+          @include d(767) {
+            padding: 0 15px;
+          }
+
+          @include d(575) {
+            padding: 0;
+          }
         }
 
         .help-slider__img_inner {
-          // min-width: 680px;
           max-width: 680px;
           border-top-right-radius: 50%;
           border-top-left-radius: 50%;
           overflow: hidden;
-          // height: 100%;
-          // max-height: 800px;
 
-          picture,
-          img {
-            // height: 100%;
+          @include d(767) {
+            max-width: 400px;
+          }
+
+          @include d(575) {
+            max-width: 100%;
           }
 
           img {
@@ -553,22 +766,23 @@
           flex-direction: column;
           justify-content: center;
           padding: 0 50px;
-          // height: 100%;
+
+          @include d(767) {
+            padding: 0 15px;
+          }
+
+          @include d(575) {
+            width: 100%;
+            padding: 15px 0;
+          }
         }
 
         .help-slider__title {
           padding: 0;
-          // max-width: 100%;
         }
       }
 
       &:first-child {
-
-        // max-width: 960px;
-        // min-width: 960px;
-        .help-slider__img_inner {
-          // max-width: 960px;
-        }
 
         .help-slider__item_inner {
           max-width: 960px;
@@ -593,12 +807,22 @@
       justify-content: space-between;
       margin: 0 -15px;
       padding: 30px 0;
+
+      @include d(767) {
+        flex-direction: column;
+        padding: 20px 0;
+        margin: 0;
+      }
     }
 
     &__text {
       padding: 0 15px;
       max-width: 250px;
       padding: 20px 0;
+
+      @include d(767) {
+        padding: 0;
+      }
 
       p {
         margin-bottom: 30px;
@@ -608,6 +832,10 @@
     &__title {
       padding: 0 15px;
       max-width: 400px;
+
+      @include d(767) {
+        padding: 0;
+      }
     }
   }
 }
@@ -615,8 +843,20 @@
 .podcast {
   padding: 70px 0;
 
+  @include d(991) {
+    padding: 20px 0;
+  }
+
+  @include d(767) {
+    padding: 0 0 20px 0;
+  }
+
   &__content {
     max-width: 360px;
+
+    @include d(767) {
+      margin-bottom: 30px;
+    }
 
     .title-3,
     & h3 {
@@ -628,11 +868,20 @@
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @include d(991) {
+      position: relative;
+      margin-top: 20px;
+    }
   }
 
   &__audio {
     padding-left: 37px;
     padding-top: 3px;
+
+    @include d(991) {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -640,9 +889,17 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    // padding-left: 27px;
     padding: 10px 0 10px 27px;
     min-height: 170px;
+
+    @include d(991) {
+      min-height: 120px;
+    }
+
+    @include d(480) {
+      flex-direction: column;
+      padding: 20px 0
+    }
 
     &:hover {
       .podcast__img {
@@ -654,7 +911,6 @@
     &:nth-child(even) {
       &::before {
         @include gradientHor;
-
       }
     }
 
@@ -678,6 +934,10 @@
   &__control {
     font-size: 14px;
     text-align: center;
+
+    @include d(480) {
+      margin-bottom: 20px;
+    }
   }
 
   &__play {
@@ -691,6 +951,20 @@
     bottom: 15px;
     opacity: 0;
     transition: opacity $hover-duration $timing, bottom $hover-duration $timing;
+
+    @include d(991) {
+      left: 25vw;
+    }
+
+    @include d(767) {
+      left: 20vw;
+      bottom: 5px;
+      max-width: 140px;
+    }
+
+    @include d(575) {
+      display: none;
+    }
   }
 
   &__title {
@@ -701,6 +975,14 @@
 
 .blog {
   padding: 125px 0 95px 0;
+
+  @include d(991) {
+    padding: 80px 0;
+  }
+
+  @include d(767) {
+    padding: 60px 0;
+  }
 
   &::before {
     content: "";
@@ -717,6 +999,10 @@
   &-slider {
     padding: 70px 0;
 
+    @include d(575) {
+      padding: 70px 0 20px 0;
+    }
+
     &__wrapper {
       overflow: hidden;
     }
@@ -726,11 +1012,20 @@
     }
 
     &__item {
-
-      // max-width: 420px;
-      // margin-right: 120px;
       &_inner {
         max-width: 420px;
+
+        @include d(1199) {
+          max-width: 340px;
+        }
+
+        @include d(767) {
+          max-width: 280px;
+        }
+
+        @include d(575) {
+          max-width: 100%;
+        }
       }
 
       &:nth-child(even) {
@@ -765,17 +1060,40 @@
       height: 30px;
       width: 10px;
       position: relative;
+
+      @include d(991) {
+        margin-left: 155px;
+        margin-top: 0;
+      }
+    }
+
+    &__controls {
+      @include d(991) {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
+
 
   &__btn {
     position: absolute;
     bottom: 80px;
+
+    @include d(991) {
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
 .cta {
   padding: 145px 0 128px 0;
+
+  @include d(1199) {
+    padding: 90px 0;
+  }
 
   &::before {
     content: "";
@@ -807,6 +1125,10 @@
 
   &-form {
     padding: 5px 0 0 40px;
+
+    @include d(991) {
+      padding: 5px 0;
+    }
 
     &__btn {
       margin-top: 25px;

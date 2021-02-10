@@ -58,26 +58,94 @@ h2 {
   font-size: 90px;
   line-height: 1.15em;
   margin: 21px 0 15px 0;
+
+  @include d(1399) {
+    font-size: 70px;
+  }
+
+  @include d(1199) {
+    font-size: 60px;
+  }
+
+  @include d(991) {
+    font-size: 50px;
+  }
+
+  @include d(767) {
+    font-size: 44px;
+  }
+
+  @include d(575) {
+    font-size: 40px;
+  }
 }
 
 h3 {
   font-size: 68px;
   line-height: 1.18em;
+
+  @include d(1399) {
+    font-size: 60px;
+  }
+
+  @include d(1199) {
+    font-size: 50px;
+  }
+
+  @include d(991) {
+    font-size: 40px;
+  }
+
+  @include d(767) {
+    font-size: 36px;
+  }
+
+  @include d(575) {
+    font-size: 32px;
+  }
 }
 
 h4 {
   font-size: 38px;
   line-height: 1.15em;
+
+  @include d(1399) {
+    font-size: 34px;
+  }
+
+  @include d(1199) {
+    font-size: 30px;
+  }
+
+  @include d(991) {
+    font-size: 26px;
+  }
+
+  @include d(767) {
+    font-size: 24px;
+  }
+
+  @include d(575) {
+    font-size: 20px;
+  }
 }
 
 h5 {
   font-size: 18px;
   line-height: 1.7em;
+
+  @include d(1399) {
+    font-size: 16px;
+  }
 }
 
 h6 {
   font-size: 16px;
   line-height: 1.7em;
+
+  @include d(1399) {
+    font-size: 14px;
+  }
 }
 
 .title-1 {
@@ -110,6 +178,7 @@ a {
   color: inherit;
   line-height: 1.6em;
   margin: 0;
+  outline: none;
 }
 
 b,
@@ -275,6 +344,10 @@ textarea {
   @include m(1900) {
     max-width: 1700px;
   }
+
+  @include d(991) {
+    max-width: 100%;
+  }
 }
 
 .subtitle {
@@ -283,6 +356,10 @@ textarea {
   @include gradientHor;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include d(1199) {
+    font-size: 18px;
+  }
 }
 
 .btn {
@@ -370,6 +447,16 @@ textarea {
   &_lg {
     width: 170px;
     height: 170px;
+
+    @include d(1199) {
+      width: 140px;
+      height: 140px;
+    }
+
+    @include d(991) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &-play {
@@ -385,6 +472,11 @@ textarea {
     left: 50%;
     transform: translate(-50%, 0) scale(1);
     transition: transform $hover-duration $timing;
+
+    @include d(1199) {
+      width: 60px;
+      height: 60px;
+    }
 
     &:hover {
       transform: translate(-50%, 0) scale(.8);
