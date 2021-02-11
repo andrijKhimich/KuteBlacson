@@ -15,18 +15,18 @@
           <div class="row">
             <div class="col-lg-5">
               <div class="hero__title js-show-onload js-slideLeft">
-                <p class="subtitle">A Transformational Truth Teacher</p>
-                <h1 class="title-1">Awaken Your Potential. Fulfill Your Purpose.</h1>
-                <p class="subtitle">Practical Wisdom For Modern Times</p>
+                <p class="subtitle js-show-onload js-slideRight">A Transformational Truth Teacher</p>
+                <h1 class="title-1 js-show-onload js-slideLeft">Awaken Your Potential. Fulfill Your Purpose.</h1>
+                <p class="subtitle js-show-onload js-slideRight">Practical Wisdom For Modern Times</p>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="hero__img js-show-onload js-slideTop">
+              <div class="hero__img js-show-onload js-slideRight">
                 <img src="img/home/hero-photo.png" alt="Kute Blackson">
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="hero__descr js-show-onload js-slideRight">
+              <div class="hero__descr js-show-onload js-slideTop">
                 <p>Kute Blackson is a transformational teacher, speaker, visionary, guide and national best-selling
                   author of
                   You.Are.The.One.</p>
@@ -82,6 +82,9 @@
         </div>
       </section>
       <section class="section about">
+        <div class="about__img_fixed js-scroll js-show js-slideTop" id="target">
+          <img src="img/home/about-img_sm.jpg" alt="about">
+        </div>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 col-xl-7">
@@ -96,7 +99,8 @@
             </div>
             <div class="col-lg-5">
               <div class="about__cta js-scroll js-show js-slideTop">
-                <a href="#" class="btn btn_lg about__btn"><span>Waiting on Kute</span><span>Waiting on Kute</span></a>
+                <a data-fancybox href="#modalLetter" class="btn btn_lg about__btn"><span>Waiting on
+                    Kute</span><span>Waiting on Kute</span></a>
               </div>
             </div>
           </div>
@@ -118,12 +122,11 @@
           </div>
           <div class="row">
             <div class="col-lg-5">
-              <div class="js-show js-scroll js-slideTop">
-              <p>His mission is simple: To awaken and inspire people across the planet to access inner freedom, live
-                authentically and
-                fulfill their true life’s purpose.</p>
+              <div class="js-show js-scroll js-slideTop" id="stopFixed">
+                <p>His mission is simple: To awaken and inspire people across the planet to access inner freedom, live
+                  authentically and
+                  fulfill their true life’s purpose.</p>
               </div>
-
             </div>
           </div>
         </div>
@@ -223,7 +226,7 @@
       <section class="section story">
         <div class="container">
           <div class="row">
-            <div class="col-xl-4 col-lg-5">
+            <div class="col-lg-5">
               <div class="story__content js-scroll js-show js-slideRight">
                 <h2 class="title-2">Boundless Bliss Bali</h2>
                 <p>is a unique 12-day, transformational, experiential, immersion, seminar training without walls, using
@@ -240,7 +243,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-lg-7">
               <div class="story__img js-scroll js-show js-slideLeft">
                 <img src="img/home/story.jpg" alt="story">
                 <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play story__play">
@@ -334,135 +337,137 @@
           </div>
           <div class="row">
             <div class="col">
-              <div class="help-slider" id="helpSlider">
-                <div class="help-slider__item">
-                  <div class="help-slider__item_inner">
-                    <div class="help-slider__img">
-                      <div class="help-slider__img_inner">
-                        <img src="img/home/help1.jpg" alt="help">
-                        <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
-                          <svg class="icon-play">
-                            <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
-                          </svg>
-                        </a>
+              <div class="help-slider__wrapper">
+                <div class="help-slider" id="helpSlider">
+                  <div class="help-slider__item">
+                    <div class="help-slider__item_inner">
+                      <div class="help-slider__img">
+                        <div class="help-slider__img_inner">
+                          <img src="img/home/help1.jpg" alt="help">
+                          <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
+                            <svg class="icon-play">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <div class="help-slider__content">
-                      <div class="help-slider__title">
-                        <h3 class="title-3">Release your past</h3>
-                      </div>
-                      <div class="help-slider__text">
-                        <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
-                        <a href="#" class="more-link"> <i>read more</i>
-                          <span class="more-link__arrow">
-                          </span>
-                        </a>
+                      <div class="help-slider__content">
+                        <div class="help-slider__title">
+                          <h3 class="title-3">Release your past</h3>
+                        </div>
+                        <div class="help-slider__text">
+                          <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
+                          <a href="#" class="more-link"> <i>read more</i>
+                            <span class="more-link__arrow">
+                            </span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="help-slider__item">
-                  <div class="help-slider__item_inner">
-                    <div class="help-slider__img">
-                      <div class="help-slider__img_inner">
-                        <img src="img/home/help2.jpg" alt="help">
-                        <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
-                          <svg class="icon-play">
-                            <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
-                          </svg>
-                        </a>
-                      </div>
+                  <div class="help-slider__item">
+                    <div class="help-slider__item_inner">
+                      <div class="help-slider__img">
+                        <div class="help-slider__img_inner">
+                          <img src="img/home/help2.jpg" alt="help">
+                          <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
+                            <svg class="icon-play">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
+                            </svg>
+                          </a>
+                        </div>
 
-                    </div>
-                    <div class="help-slider__content">
-                      <div class="help-slider__title">
-                        <h3 class="title-3">Reclaim your power</h3>
                       </div>
-                      <div class="help-slider__text">
-                        <p>Live authentically, love fully and fulfill your full potential.</p>
-                        <a href="#" class="more-link"> <i>read more</i>
-                          <span class="more-link__arrow">
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="help-slider__item">
-                  <div class="help-slider__item_inner">
-                    <div class="help-slider__img">
-                      <div class="help-slider__img_inner">
-                        <img src="img/home/help1.jpg" alt="help">
-                        <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
-                          <svg class="icon-play">
-                            <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="help-slider__content">
-                      <div class="help-slider__title">
-                        <h3 class="title-3">Release your past</h3>
-                      </div>
-                      <div class="help-slider__text">
-                        <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
-                        <a href="#" class="more-link"> <i>read more</i>
-                          <span class="more-link__arrow">
-                          </span>
-                        </a>
+                      <div class="help-slider__content">
+                        <div class="help-slider__title">
+                          <h3 class="title-3">Reclaim your power</h3>
+                        </div>
+                        <div class="help-slider__text">
+                          <p>Live authentically, love fully and fulfill your full potential.</p>
+                          <a href="#" class="more-link"> <i>read more</i>
+                            <span class="more-link__arrow">
+                            </span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="help-slider__item">
-                  <div class="help-slider__item_inner">
-                    <div class="help-slider__img">
-                      <div class="help-slider__img_inner">
-                        <img src="img/home/help2.jpg" alt="help">
-                        <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
-                          <svg class="icon-play">
-                            <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
-                          </svg>
-                        </a>
+                  <div class="help-slider__item">
+                    <div class="help-slider__item_inner">
+                      <div class="help-slider__img">
+                        <div class="help-slider__img_inner">
+                          <img src="img/home/help1.jpg" alt="help">
+                          <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
+                            <svg class="icon-play">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
+                      <div class="help-slider__content">
+                        <div class="help-slider__title">
+                          <h3 class="title-3">Release your past</h3>
+                        </div>
+                        <div class="help-slider__text">
+                          <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
+                          <a href="#" class="more-link"> <i>read more</i>
+                            <span class="more-link__arrow">
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="help-slider__item">
+                    <div class="help-slider__item_inner">
+                      <div class="help-slider__img">
+                        <div class="help-slider__img_inner">
+                          <img src="img/home/help2.jpg" alt="help">
+                          <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
+                            <svg class="icon-play">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
+                            </svg>
+                          </a>
+                        </div>
 
-                    </div>
-                    <div class="help-slider__content">
-                      <div class="help-slider__title">
-                        <h3 class="title-3">Reclaim your power</h3>
                       </div>
-                      <div class="help-slider__text">
-                        <p>Live authentically, love fully and fulfill your full potential.</p>
-                        <a href="#" class="more-link"> <i>read more</i>
-                          <span class="more-link__arrow">
-                          </span>
-                        </a>
+                      <div class="help-slider__content">
+                        <div class="help-slider__title">
+                          <h3 class="title-3">Reclaim your power</h3>
+                        </div>
+                        <div class="help-slider__text">
+                          <p>Live authentically, love fully and fulfill your full potential.</p>
+                          <a href="#" class="more-link"> <i>read more</i>
+                            <span class="more-link__arrow">
+                            </span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="help-slider__item">
-                  <div class="help-slider__item_inner">
-                    <div class="help-slider__img">
-                      <div class="help-slider__img_inner">
-                        <img src="img/home/help1.jpg" alt="help">
-                        <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
-                          <svg class="icon-play">
-                            <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
-                          </svg>
-                        </a>
+                  <div class="help-slider__item">
+                    <div class="help-slider__item_inner">
+                      <div class="help-slider__img">
+                        <div class="help-slider__img_inner">
+                          <img src="img/home/help1.jpg" alt="help">
+                          <a data-fancybox href="https://youtu.be/1hTqLDm5byk" class="btn-play help-slider__play">
+                            <svg class="icon-play">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#play"></use>
+                            </svg>
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <div class="help-slider__content">
-                      <div class="help-slider__title">
-                        <h3 class="title-3">Release your past</h3>
-                      </div>
-                      <div class="help-slider__text">
-                        <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
-                        <a href="#" class="more-link"> <i>read more</i>
-                          <span class="more-link__arrow">
-                          </span>
-                        </a>
+                      <div class="help-slider__content">
+                        <div class="help-slider__title">
+                          <h3 class="title-3">Release your past</h3>
+                        </div>
+                        <div class="help-slider__text">
+                          <p>Find your purpose. Discover the REAL YOU. Love Fully.</p>
+                          <a href="#" class="more-link"> <i>read more</i>
+                            <span class="more-link__arrow">
+                            </span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -690,7 +695,10 @@
       </section>
     </main>
     @@include('components/_footer.html')
+
   </div>
+  @@include('components/_modal.html')
+
   @@include('links/_scripts.html')
 </body>
 

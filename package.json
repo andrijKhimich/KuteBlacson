@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@mystroken/drag": "^0.2.0",
     "bootstrap-4-grid": "^3.4.0",
     "jquery": "^3.5.0",
     "jquery-nice-select": "^1.1.0",

@@ -87,8 +87,11 @@ gulp.task("js", function () {
       "node_modules/slick-carousel/slick/slick.min.js",
       "node_modules/svg4everybody/dist/svg4everybody.min.js",
       "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
-      // "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
-      // "src/libs/datepicker/dist/js/datepicker-full.min.js",
+      // "node_modules/@mystroken/drag/index.js",
+      // "src/libs/drag-master/index.js",
+      'src/libs/drag-swipe-scroll/jquery.dragscroll.min.js',
+      // 'src/libs/dragscroll-master/dragscroll.js',
+
       "src/js/script.js",
     ])
     .pipe(sourcemaps.init())
