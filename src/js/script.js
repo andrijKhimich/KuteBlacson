@@ -1,11 +1,13 @@
 const body = document.getElementsByTagName('body')[0];
 const mainWrapper = document.querySelector('.main-wrapper');
 const testimonialsSlider = document.querySelector('#testimonialsSlider');
-const bannerSlider = document.querySelector('#bannerSlider');
+// const bannerSlider = document.querySelector('#bannerSlider');
 const storeSlider = document.querySelector('#storeSlider');
 const blogSlider = document.querySelector('#blogSlider');
 const menuBtn = document.querySelector('#menuBtn');
 const nav = document.querySelector('#nav');
+const partners = $('#partnerSlider');
+const fixed = $('#target');
 // const show = document.querySelector('#nav');
 
 
@@ -25,6 +27,7 @@ const nav = document.querySelector('#nav');
 // const innerHeader = document.querySelector('.header_inner');
 // const logoImg = document.querySelector('.logo img');
 // const logoSource = document.querySelector('.logo source');
+
 
 
 function initTestimonialsSlider() {
@@ -58,18 +61,18 @@ function initStoreSlider() {
   });
 }
 
-function initBannerSlider() {
-  $(bannerSlider).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    dots: false,
-    fade: true,
-    arrows: false,
-    infinite: false,
-    autoplaySpeed: 10000
-  });
-}
+// function initBannerSlider() {
+//   $(bannerSlider).slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     dots: false,
+//     fade: true,
+//     arrows: false,
+//     infinite: false,
+//     autoplaySpeed: 10000
+//   });
+// }
 
 
 
@@ -128,14 +131,8 @@ function showContent() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  showContent();
-  initPartnersSlider();
-  initTestimonialsSlider();
-  initBannerSlider();
-  initStoreSlider();
-  // initHelpSlider();
-  initBlogSlider();
-  fixedImage();
+
+
   // toggle main menu
   menuBtn.addEventListener('click', function () {
     if (this.classList.contains("active")) {
@@ -145,10 +142,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  window.addEventListener('resize', function (event) {
-    initPartnersSlider();
-    // initHelpSlider();
-  });
+  const slider = document.querySelector('.help-slider');
+  if (slider) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+      console.log(walk);
+    });
+
+  }
 
 
   // function initHelpSlider() {
@@ -173,50 +196,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // }
 
-  function initPartnersSlider() {
-    const partnerSlider = document.querySelector('#partnerSlider.slick-slider');
-    if (window.innerWidth < 991 && !partnerSlider) {
-      $('#partnerSlider').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        dots: false,
-        arrows: false,
-        infinite: false,
-        autoplaySpeed: 10000,
-        mobileFirst: true,
-        responsive: [{
-            breakpoint: 991,
-            settings: 'unslick'
-          },
-          {
-            breakpoint: 180,
-            settings: {
-              slidesToShow: 1
-
-            }
-          },
-          {
-            breakpoint: 575,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
-              dots: true
-            }
-          }
-        ]
-      });
-    }
-  }
 });
 
 function fixedImage() {
-  const fixed = $('#target');
   const stopElement = $('#stopFixed');
   // console.log(fixed.offset().top);
   let topPosition = fixed.offset().top;
@@ -379,7 +361,18 @@ testWebP(function (support) {
 });
 
 $(document).ready(function () {
-
+  showContent();
+  if (partners) {
+    initPartnersSlider();
+  }
+  initTestimonialsSlider();
+  // initBannerSlider();
+  initStoreSlider();
+  // initHelpSlider();
+  initBlogSlider();
+  if (fixed.length) {
+    fixedImage();
+  }
   // showOnLoad();
   showOnScroll($(window).scrollTop());
   $(window).scroll(function () {
@@ -388,35 +381,57 @@ $(document).ready(function () {
     scrollValue >= 1 ? closeMenu() : null;
   });
 
+
+
+  $(window).resize(function () {
+    if (partners) {
+      initPartnersSlider();
+    }
+  });
+
+  function initPartnersSlider() {
+    const partnerSlider = $('#partnerSlider.slick-slider');
+    if (window.innerWidth < 991 && !partnerSlider) {
+      $('#partnerSlider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        arrows: false,
+        infinite: false,
+        autoplaySpeed: 10000,
+        mobileFirst: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: 'unslick'
+          },
+          {
+            breakpoint: 180,
+            settings: {
+              slidesToShow: 1
+
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              dots: true
+            }
+          }
+        ]
+      });
+    }
+  }
 });
 
-const slider = document.querySelector('.help-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
 
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
-});
 
 function showOnScroll(scrollValue) {
   $('.js-scroll').each(function () {
