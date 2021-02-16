@@ -1,125 +1,125 @@
-.modal {
-  padding: 0;
-  display: none;
-  &__content {
-    position: relative;
-    overflow: hidden;
-    padding: 80px 100px;
+// .modal {
+//   padding: 0;
+//   display: none;
+//   &__content {
+//     position: relative;
+//     overflow: hidden;
+//     padding: 80px 100px;
 
-    @include d(991) {
-      padding: 40px 60px;
-    }
+//     @include d(991) {
+//       padding: 40px 60px;
+//     }
 
-    @include d(767) {
-      padding: 30px;
-    }
+//     @include d(767) {
+//       padding: 30px;
+//     }
     
-    @include d(575) {
-      padding: 25px 15px;
-    }
-  }
+//     @include d(575) {
+//       padding: 25px 15px;
+//     }
+//   }
 
-  &__letter {
-    max-width: 870px;
-    max-height: fit-content;
+//   &__letter {
+//     max-width: 870px;
+//     max-height: fit-content;
 
-    .title4,
-    & h4,
-    & p {
-      margin-bottom: 44px;
-      @include gradientHor;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+//     .title4,
+//     & h4,
+//     & p {
+//       margin-bottom: 44px;
+//       @include gradientHor;
+//       -webkit-background-clip: text;
+//       -webkit-text-fill-color: transparent;
 
-      @include d(767) {
-        font-size: 20px;
-      }
+//       @include d(767) {
+//         font-size: 20px;
+//       }
 
-      @include d(767) {
-        margin-bottom: 20px;
-      }
-    }
+//       @include d(767) {
+//         margin-bottom: 20px;
+//       }
+//     }
 
-    p {
-      font-size: 18px;
+//     p {
+//       font-size: 18px;
 
-      @include d(767) {
-        font-size: 16px;
-      }
-    }
-  }
+//       @include d(767) {
+//         font-size: 16px;
+//       }
+//     }
+//   }
 
-  &__img {
-    max-width: 370px;
-    border-radius: 230px;
-    margin-top: 40px;
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-    overflow: hidden;
-    @include d(575) {
-      margin: 20px auto;
-    }
-  }
-}
+//   &__img {
+//     max-width: 370px;
+//     border-radius: 230px;
+//     margin-top: 40px;
+//     position: relative;
+//     z-index: 1;
+//     background-color: transparent;
+//     overflow: hidden;
+//     @include d(575) {
+//       margin: 20px auto;
+//     }
+//   }
+// }
 
-.modal-elipse1 {
-  position: absolute;
-  width: 700px;
-  height: 500px;
-  left: -40px;
-  bottom: 0;
-  background-color: $yellow;
-  opacity: 0.06;
-  filter: blur(250px);
-  transform: rotate(85.38deg);
-}
+// .modal-elipse1 {
+//   position: absolute;
+//   width: 700px;
+//   height: 500px;
+//   left: -40px;
+//   bottom: 0;
+//   background-color: $yellow;
+//   opacity: 0.06;
+//   filter: blur(250px);
+//   transform: rotate(85.38deg);
+// }
 
-.modal-elipse2 {
-  position: absolute;
-  width: 691px;
-  height: 680px;
-  left: 0;
-  bottom: 0;
-  background: $pink;
-  opacity: 0.06;
-  filter: blur(250px);
-  transform: rotate(90deg);
-}
+// .modal-elipse2 {
+//   position: absolute;
+//   width: 691px;
+//   height: 680px;
+//   left: 0;
+//   bottom: 0;
+//   background: $pink;
+//   opacity: 0.06;
+//   filter: blur(250px);
+//   transform: rotate(90deg);
+// }
 
 
 
-.modal-elipse {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
-  border: 1px solid #000000;
+// .modal-elipse {
+//   position: absolute;
+//   border-radius: 50%;
+//   opacity: 0.1;
+//   border: 1px solid #000000;
 
-  &._3 {
-    width: 600px;
-    height: 600px;
-    right: -140px;
-    bottom: -500px;
-  }
+//   &._3 {
+//     width: 600px;
+//     height: 600px;
+//     right: -140px;
+//     bottom: -500px;
+//   }
 
-  &._4 {
-    width: 700px;
-    height: 700px;
-    right: -450px;
-    bottom: -100px;
-  }
+//   &._4 {
+//     width: 700px;
+//     height: 700px;
+//     right: -450px;
+//     bottom: -100px;
+//   }
 
-  &._5 {
-    width: 600px;
-    height: 600px;
-    right: -250px;
-    bottom: -350px;
-  }
+//   &._5 {
+//     width: 600px;
+//     height: 600px;
+//     right: -250px;
+//     bottom: -350px;
+//   }
 
-  &._6 {
-    width: 1224px;
-    height: 1224px;
-    top: -200px;
-    right: 30%;
-  }
-}
+//   &._6 {
+//     width: 1224px;
+//     height: 1224px;
+//     top: -200px;
+//     right: 30%;
+//   }
+// }

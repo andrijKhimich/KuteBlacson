@@ -144,3 +144,6 @@
 @mixin gradientVert {
   background-image: linear-gradient(to bottom, #DE5B6F, #57CFFF);
 }
+@mixin gradientVertBack {
+  background-image: linear-gradient(to top, #DE5B6F, #57CFFF);
+}

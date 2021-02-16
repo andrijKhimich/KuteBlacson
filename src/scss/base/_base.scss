@@ -459,6 +459,21 @@ textarea {
     }
   }
 
+  &_md {
+    width: 140px;
+    height: 140px;
+
+    @include d(1199) {
+      width: 110px;
+      height: 110px;
+    }
+
+    @include d(991) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
   &-play {
     width: 96px;
     height: 96px;

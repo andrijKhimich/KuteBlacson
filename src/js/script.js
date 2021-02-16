@@ -12,7 +12,7 @@ const partners = $('#partnerSlider');
 const fixed = $('#target');
 // const show = document.querySelector('#nav');
 
-
+// console.log(partners);
 
 
 // const caseSlider = document.querySelector('#caseSlider');
@@ -40,6 +40,7 @@ function initTestimonialsSlider() {
     dots: false,
     fade: true,
     arrows: true,
+    adaptiveHeight: true,
     prevArrow: $('#testimonialsPrev'),
     nextArrow: $('#testimonialsNext'),
     infinite: false,
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const x = e.pageX - slider.offsetLeft;
       const walk = (x - startX) * 3; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
-      console.log(walk);
+      // console.log(walk);
     });
 
   }
@@ -228,14 +229,14 @@ document.addEventListener("DOMContentLoaded", function () {
 function fixedImage() {
   const stopElement = $('#stopFixed');
   // console.log(fixed.offset().top);
-  let topPosition = fixed.offset().top;
-  let stopPosition = stopElement.offset().top + stopElement.height() - fixed.height();
+  let topPosition = fixed.offset().top + 20;
+  let stopPosition = stopElement.offset().top - fixed.height() - 40;
   // console.log(topPosition, stopPosition);
   let lastScrollTop = 0;
   $(window).scroll(function (event) {
     let scrollPosition = $(this).scrollTop();
     if (scrollPosition > lastScrollTop) {
-      console.log('Down');
+      // console.log('Down');
       if (scrollPosition >= topPosition && scrollPosition <= stopPosition) {
         fixed.css({
           'position': 'fixed',
@@ -255,7 +256,7 @@ function fixedImage() {
       }
 
     } else {
-      console.log('Up');
+      // console.log('Up');
 
       if (scrollPosition >= topPosition && scrollPosition <= stopPosition) {
         fixed.css({
@@ -389,7 +390,9 @@ testWebP(function (support) {
 
 $(document).ready(function () {
   showContent();
-  if (partners) {
+
+  if (partners.length) {
+    // console.log('lenght1')
     initPartnersSlider();
   }
   initTestimonialsSlider();
@@ -399,7 +402,7 @@ $(document).ready(function () {
   initStoreSlider();
   // initHelpSlider();
   initBlogSlider();
-  if (fixed.length) {
+  if (fixed.length && ($(window).width() > 1199)) {
     fixedImage();
   }
   // showOnLoad();
@@ -413,14 +416,17 @@ $(document).ready(function () {
 
 
   $(window).resize(function () {
-    if (partners) {
+    if (partners.length) {
+      // console.log('lenght')
       initPartnersSlider();
     }
   });
 
   function initPartnersSlider() {
-    const partnerSlider = $('#partnerSlider.slick-slider');
-    if (window.innerWidth < 991 && !partnerSlider) {
+    // console.log('start')
+    const partnerSlider = document.querySelector('#partnersSlider.slick-slider');
+    if ($(window).width() < 991 && !partnerSlider) {
+      console.log('start');
       $('#partnerSlider').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
