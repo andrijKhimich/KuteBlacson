@@ -1,11 +1,13 @@
-const body = document.getElementsByTagName('body')[0];
-const mainWrapper = document.querySelector('.main-wrapper');
-const testimonialsSlider = document.querySelector('#testimonialsSlider');
+const body = $('body');
+const mainWrapper = $('.main-wrapper');
+const testimonialsSlider = $('#testimonialsSlider');
 // const bannerSlider = document.querySelector('#bannerSlider');
-const storeSlider = document.querySelector('#storeSlider');
-const blogSlider = document.querySelector('#blogSlider');
-const menuBtn = document.querySelector('#menuBtn');
-const nav = document.querySelector('#nav');
+const meditationSlider = $('#meditationSlider');
+
+const storeSlider = $('#storeSlider');
+const blogSlider = $('#blogSlider');
+const menuBtn = $('#menuBtn');
+const nav = $('#nav');
 const partners = $('#partnerSlider');
 const fixed = $('#target');
 // const show = document.querySelector('#nav');
@@ -75,6 +77,26 @@ function initStoreSlider() {
 // }
 
 
+function initMeditationSlider() {
+  $(meditationSlider).slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: false,
+    fade: false,
+    arrows: true,
+    prevArrow: $('#meditationPrev'),
+    nextArrow: $('#meditationNext'),
+    infinite: false,
+    // autoplaySpeed: 10000,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+  });
+}
 
 function initBlogSlider() {
   $(blogSlider).slick({
@@ -108,15 +130,20 @@ function initBlogSlider() {
 // }
 
 function openMenu() {
-  menuBtn.classList.add('active');
-  nav.classList.add('active');
-  body.style.overflow = 'hidden';
+  menuBtn.addClass('active');
+  nav.addClass('active');
+  body.css({
+    'overflow': 'hidden'
+  });
 }
 
 function closeMenu() {
-  menuBtn.classList.remove('active');
-  nav.classList.remove('active');
-  body.style.overflow = 'auto';
+  menuBtn.removeClass('active');
+  nav.removeClass('active');
+  body.css({
+    'overflow': 'auto'
+  });
+
 }
 
 function showContent() {
@@ -134,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // toggle main menu
-  menuBtn.addEventListener('click', function () {
+  menuBtn.click(function () {
     if (this.classList.contains("active")) {
       closeMenu();
     } else {
@@ -367,6 +394,8 @@ $(document).ready(function () {
   }
   initTestimonialsSlider();
   // initBannerSlider();
+  initMeditationSlider();
+
   initStoreSlider();
   // initHelpSlider();
   initBlogSlider();
