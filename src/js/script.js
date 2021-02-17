@@ -10,6 +10,8 @@ const menuBtn = $('#menuBtn');
 const nav = $('#nav');
 const partners = $('#partnerSlider');
 const fixed = $('#target');
+const experiance = $('#experianceSlider');
+
 // const show = document.querySelector('#nav');
 
 // console.log(partners);
@@ -48,7 +50,6 @@ function initTestimonialsSlider() {
   });
 }
 
-
 function initStoreSlider() {
   $(storeSlider).slick({
     slidesToShow: 1,
@@ -64,20 +65,6 @@ function initStoreSlider() {
   });
 }
 
-// function initBannerSlider() {
-//   $(bannerSlider).slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     dots: false,
-//     fade: true,
-//     arrows: false,
-//     infinite: false,
-//     autoplaySpeed: 10000
-//   });
-// }
-
-
 function initMeditationSlider() {
   $(meditationSlider).slick({
     slidesToShow: 2,
@@ -89,7 +76,6 @@ function initMeditationSlider() {
     prevArrow: $('#meditationPrev'),
     nextArrow: $('#meditationNext'),
     infinite: false,
-    // autoplaySpeed: 10000,
     responsive: [{
       breakpoint: 767,
       settings: {
@@ -144,12 +130,10 @@ function closeMenu() {
   body.css({
     'overflow': 'auto'
   });
-
 }
 
 function showContent() {
   $(mainWrapper).removeClass('js-fadeIn');
-
   setTimeout(function () {
     $('.js-show-onload').each(function () {
       let elem = $(this);
@@ -158,9 +142,8 @@ function showContent() {
   }, 800);
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
-
-
   // toggle main menu
   menuBtn.click(function () {
     if (this.classList.contains("active")) {
@@ -200,30 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
-
-
-  // function initHelpSlider() {
-  //   const helpSlider = document.querySelector('#helpSlider.slick-slider');
-  //   if (window.innerWidth < 767 && !helpSlider) {
-  //     $(helpSlider).slick({
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       autoplay: false,
-  //       dots: false,
-  //       fade: false,
-  //       arrows: false,
-  //       infinite: false,
-  //       autoplaySpeed: 10000,
-  //       responsive: [{
-  //         breakpoint: 575,
-  //         settings: {
-  //           adaptiveHeight: true
-  //         }
-  //       }]
-  //     });
-  //   }
-  // }
-
 });
 
 function fixedImage() {
@@ -283,34 +242,34 @@ function fixedImage() {
 }
 
 
-// function initTestimonialsSlider() {
-//   const counter = document.querySelector('#testimonialsSliderInfo');
-//   $(testimonialsSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-//     if (!slick.$dots) {
-//       return;
-//     }
-//     let i = (currentSlide ? currentSlide : 0) + 1;
-//     counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
-//   });
+function initExperianceSlider() {
+  // const counter = document.querySelector('#experianceSliderInfo');
+  // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  //   if (!slick.$dots) {
+  //     return;
+  //   }
+  //   let i = (currentSlide ? currentSlide : 0) + 1;
+  //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
+  // });
 
-//   $(testimonialsSlider).slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     dots: true,
-//     infinite: false,
-//     speed: 800,
-//     fade: true,
-//     arrows: true,
-//     prevArrow: $('#testimonialsPrev'),
-//     nextArrow: $('#testimonialsNext'),
-//     responsive: [{
-//       breakpoint: 991,
-//       settings: {
-//         adaptiveHeight: true
-//       }
-//     }]
-//   });
-// }
+  $(experianceSlider).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // dots: true,
+    infinite: true,
+    // speed: 800,
+    fade: false,
+    arrows: true,
+    prevArrow: $('#experiencesPrev'),
+    nextArrow: $('#experiencesNext')
+    // responsive: [{
+    //   breakpoint: 991,
+    //   settings: {
+    //     adaptiveHeight: true
+    //   }
+    // }]
+  });
+}
 
 // function initPracticeSlider() {
 //   const counter = document.querySelector('#practiceSliderInfo');
@@ -389,6 +348,8 @@ testWebP(function (support) {
 });
 
 $(document).ready(function () {
+
+  initExperianceSlider();
   showContent();
 
   if (partners.length) {

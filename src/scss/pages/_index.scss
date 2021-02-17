@@ -1403,9 +1403,11 @@
   max-width: 560px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 100px;
   z-index: 1;
-
+  @include d(1440) {
+    right: 0;
+  }
   @include d(1199) {
     // max-width: 240px;
     // right: 100px

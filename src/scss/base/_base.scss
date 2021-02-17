@@ -444,6 +444,22 @@ textarea {
     }
   }
 
+  &_xl {
+    width: 260px;
+    height: 260px;
+
+    @include d(1199) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include d(991) {
+      width: 140px;
+      height: 140px;
+      font-size: 16px;
+    }
+  }
+
   &_lg {
     width: 170px;
     height: 170px;
