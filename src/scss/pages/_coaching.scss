@@ -1,0 +1,190 @@
+.about-coaching {
+  padding: 100px 0 20px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 810px;
+    height: 820px;
+    bottom: 0;
+    right: 0;
+    background-color: $pink;
+    opacity: 0.08;
+    filter: blur(250px);
+    transform: rotate(107.1deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 580px;
+    height: 590px;
+    left: 0;
+    top: 10%;
+    background-color: $blue;
+    opacity: 0.1;
+    filter: blur(250px);
+    transform: rotate(107.1deg);
+  }
+
+  &__top {
+    margin-bottom: 90px;
+
+    @include d(991) {
+      margin-bottom: 50px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    margin-right: 20px;
+
+    @include d(991) {
+      margin-right: 0;
+    }
+  }
+
+  &__quote {
+    margin-bottom: 135px;
+
+    @include d(991) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img {
+    max-width: 480px;
+    margin: 0 auto 80px auto;
+
+    @include d(991) {
+      margin: 0 auto 40px auto;
+    }
+  }
+
+  &__bottom {
+    margin-top: 90px;
+
+    @include d(991) {
+      margin-top: 40px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.now {
+  padding: 10px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1300px;
+    height: 1300px;
+    left: -219px;
+    top: -200%;
+    opacity: 0.1;
+    border-radius: 50%;
+    border: 1px solid #000000;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 790px;
+    height: 790px;
+    left: 0;
+    top: 0;
+    background-color: $pink;
+    opacity: 0.08;
+    filter: blur(250px);
+    transform: rotate(107.1deg);
+  }
+
+  &__content {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 600px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+  }
+
+  &__title {
+    font-size: 144px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 600;
+    @include gradientHor;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include d(1399) {
+      font-size: 120px;
+    }
+
+    @include d(1199) {
+      font-size: 100px;
+    }
+
+    @include d(991) {
+      font-size: 90px;
+    }
+
+    @include d(767) {
+      font-size: 80px;
+    }
+  }
+}
+
+.letter {
+  padding: 5px 0 100px 0;
+
+  &__text {
+    padding-top: 60px;
+    position: relative;
+
+    @include d(1199) {
+      padding-top: 20px;
+    }
+
+    p {
+      @include gradientHor;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+      font-size: 22px;
+
+      @include d(1199) {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+
+    img {
+      max-width: 120px;
+      position: absolute;
+      top: 100%;
+      left: 10%;
+    }
+  }
+}
+
+.coaching__testimonials {
+  padding: 0 0 80px 0;
+}

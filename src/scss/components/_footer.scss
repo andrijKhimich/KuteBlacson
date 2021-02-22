@@ -106,6 +106,7 @@
       li {
         line-height: 1em;
 
+
         &:not(:last-child) {
           margin-bottom: 30px;
 
@@ -117,6 +118,13 @@
 
         a {
           line-height: 1em;
+
+          &:hover {
+            @include gradientHor;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
         }
       }
     }

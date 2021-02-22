@@ -1,9 +1,9 @@
 .hero {
-  padding-top: 122px;
+  padding-top: 200px;
   background-color: $heroBg;
 
-  @include m(1920) {
-    padding-top: 240px;
+  @include d(1920) {
+    padding-top: 122px;
   }
 
   @include d(1399) {
@@ -38,11 +38,15 @@
     height: 100%;
 
     img {
-      max-width: 477px;
+      max-width: 600px;
       width: 114%;
       position: absolute;
       bottom: 0;
       left: -80px;
+
+      @include d(1440) {
+        max-width: 477px;
+      }
 
       @include d(1199) {
         position: static;
@@ -173,7 +177,7 @@
 
 
 .about {
-  padding: 80px 0;
+  padding: 80px 0 20px 0;
 
   @include d(767) {
     padding: 40px 0;
@@ -234,9 +238,11 @@
     }
 
     @include d(991) {
-      max-width: 400px;
-      margin: 0 auto;
+      max-width: 500px;
+      margin: 0 auto 40px auto;
+
     }
+
 
     &_fixed {
       padding-top: 40px;
@@ -297,16 +303,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 0 40px 190px 0;
+    flex-wrap: wrap;
+    margin: 0 40px 80px 0;
 
     @include d(1199) {
-      // margin: 0 0 100px 0;
       margin: 0 0 40px 0;
-
-    }
-
-    @include d(767) {
-      // margin: 0 0 40px 0;
     }
 
     @include d(575) {
@@ -337,16 +338,11 @@
 
   &-slider {
     margin: 50px 0;
-    padding: 140px 65px 130px 80px;
+    padding: 80px;
     position: relative;
 
-    @include d(1440) {
-      padding: 110px 45px 116px 60px;
-
-    }
-
     @include d(767) {
-      padding: 80px 15px 66px 20px;
+      padding: 40px;
     }
 
     &::before {
@@ -360,6 +356,11 @@
       top: 10px;
       left: 60px;
       line-height: 1em;
+
+      @include d(767) {
+        left: 40px;
+        top: 0;
+      }
     }
 
     &::after {
@@ -377,7 +378,7 @@
 
       .testimonials-slider__content,
       .testimonials-slider__author {
-        transform: translate(0, 0);
+        // transform: translate(0, 0);
         opacity: 1;
       }
     }
@@ -394,7 +395,8 @@
     }
 
     &__content {
-      max-width: 420px;
+      max-width: 50%;
+      flex: 0 0 50%;
       opacity: 0;
       position: relative;
       transform: translate(0, 20px);
@@ -403,6 +405,8 @@
       @include d(767) {
         margin-bottom: 30px;
         max-width: 100%;
+        flex: 0 0 100%;
+
       }
     }
 
@@ -415,25 +419,27 @@
     }
 
     &__author {
-      display: flex;
-      align-items: center;
-      transform: translate(0, -20px);
-      transition-delay: 1s;
-      transition: transform $hover-duration $timing, opacity $hover-duration $timing;
-      width: 500px;
+      // display: flex;
+      // align-items: center;
+      // transform: translate(0, -20px);
+      // transition-delay: 1s;
+      // transition: transform $hover-duration $timing, opacity $hover-duration $timing;
+      width: 50%;
+      flex: 0 0 50%;
 
       @include d(1440) {
-        width: auto;
+        width: 100%;
       }
     }
 
     &__img {
-      max-width: 180px;
-      margin-right: 50px;
+      max-width: 280px;
+      margin-right: 0;
+      margin-left: auto;
       width: 100%;
 
       @include d(1440) {
-        max-width: 128px;
+        max-width: 228px;
       }
 
       @include d(991) {
@@ -489,18 +495,19 @@
 }
 
 .banner {
-  padding: 230px 0;
+  padding: 160px 0 300px 0;
   z-index: 1;
   background-size: cover;
-  background-position: top center;
+  background-position: center right;
   background-repeat: no-repeat;
 
   @include d(1399) {
-    padding: 180px 0;
+    padding: 120px 0 240px 0;
+
   }
 
   @include d(1199) {
-    padding: 160px 0;
+    padding: 100px 0 220px 0;
   }
 
   @include d(575) {
@@ -510,21 +517,16 @@
 
   &__img {
     position: absolute;
-    bottom: -290px;
+    bottom: -400px;
     max-width: 320px;
 
     @include d(1399) {
+      bottom: -320px;
+    }
+
+    @include d(1199) {
+      max-width: 240px;
       bottom: -260px;
-    }
-
-    @include d(1199) {
-      max-width: 240px;
-      bottom: -200px;
-    }
-
-    @include d(1199) {
-      max-width: 240px;
-      bottom: -200px;
     }
 
     @include d(575) {
@@ -535,9 +537,11 @@
   &-list {
     font-size: 38px;
     color: $white;
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: 0;
+    max-width: 460px;
+    // margin-left: auto;
+    // margin-right: 0;
+    position: relative;
+    z-index: 1;
 
     @include d(1399) {
       font-size: 32px;
@@ -561,6 +565,7 @@
     &__item {
       line-height: 1.15em;
       margin-bottom: 25px;
+      font-weight: 700;
     }
   }
 }
@@ -624,10 +629,9 @@
 .store {
   padding: 60px 0 20px 0;
 
-
   &-slider {
     margin: 60px 0;
-    padding: 80px 0 76px 110px;
+    padding: 40px 0 40px 110px;
     position: relative;
 
     @include d(1399) {
@@ -640,6 +644,11 @@
 
     }
 
+    @include d(991) {
+      padding: 40px 0 40px 0;
+      margin: 30px 0;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -649,6 +658,11 @@
       height: 100%;
       @include gradientVert;
       opacity: .1;
+      z-index: -1;
+
+      @include d(991) {
+        left: -15px;
+      }
     }
 
     &__wrapper {
@@ -769,6 +783,44 @@
 
       @include d(1199) {
         left: 50%;
+      }
+    }
+
+    &__mark {
+      width: 190px;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $black;
+      border-radius: 50%;
+      position: absolute;
+      top: -100px;
+      right: 100px;
+      z-index: 1;
+      text-transform: uppercase;
+      padding: 20px;
+      text-align: center;
+
+      @include d(1440) {
+        top: -100px;
+        right: 0;
+      }
+
+      @include d(1199) {
+        width: 130px;
+        height: 130px;
+        font-size: 14px;
+        top: -60px;
+      }
+
+      @include d(991) {
+        right: 10%;
+      }
+
+      @include d(575) {
+        right: 0;
+        top: -80px;
       }
     }
   }
@@ -1233,10 +1285,10 @@
 }
 
 .blog {
-  padding: 125px 0 95px 0;
+  padding: 125px 0 40px 0;
 
   @include d(991) {
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
   }
 
   @include d(767) {
@@ -1348,10 +1400,10 @@
 }
 
 .cta {
-  padding: 145px 0 128px 0;
+  padding: 70px 0 128px 0;
 
   @include d(1199) {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
   &::before {
@@ -1367,9 +1419,9 @@
 
   &__content {
 
-    .title-3,
-    & h3 {
-      margin-bottom: 50px;
+    .title-2,
+    & h2 {
+      margin-bottom: 40px;
     }
 
     .subtitle {
@@ -1378,8 +1430,8 @@
     }
 
     p {
+      font-size: 22px;
       margin-bottom: 20px;
-      max-width: 490px;
     }
   }
 
@@ -1397,63 +1449,53 @@
 }
 
 .fixed {
-  padding: 0;
+  // padding: 0;
   padding-top: 40px;
   // padding-bottom: 20px;
   max-width: 560px;
-  position: absolute;
-  top: 0;
-  right: 100px;
-  z-index: 1;
-  @include d(1440) {
-    right: 0;
-  }
-  @include d(1199) {
-    // max-width: 240px;
-    // right: 100px
-    // position: static;
-    padding-top: 0;
-  }
+  margin: 0 auto;
+  // position: absolute;
+  // top: 0;
+  // right: 100px;
+  // z-index: 1;
 
-  @include d(991) {
-    display: none;
-  }
+  // @include d(1440) {
+  //   right: 0;
+  // }
+
+  // @include d(1199) {
+  //   // max-width: 240px;
+  //   // right: 100px
+  //   // position: static;
+  //   padding-top: 0;
+  // }
+
+  // @include d(991) {
+  //   display: none;
+  // }
 
   // display: none;
   &__content {
     position: relative;
-    overflow: hidden;
-    padding: 20px;
-
-    // @include d(991) {
-    //   padding: 40px 60px;
-    // }
-
-    // @include d(767) {
-    //   padding: 30px;
-    // }
-
-    // @include d(575) {
-    //   padding: 25px 15px;
-    // }
+    // overflow: hidden;
+    // padding: 20px;
   }
 
   &__letter {
-    // max-width: 870px;
-    max-height: fit-content;
+    // max-height: fit-content;
 
-    .title4,
-    & h4,
+    .title3,
+    & h3,
     & p {
       margin-bottom: 10px;
       @include gradientHor;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 24px;
+      font-size: 32px;
 
-      @include d(767) {
-        font-size: 20px;
-      }
+      // @include d(767) {
+      //   font-size: 20px;
+      // }
 
       @include d(767) {
         margin-bottom: 20px;
@@ -1462,10 +1504,6 @@
 
     p {
       font-size: 16px;
-
-      // @include d(767) {
-      //   font-size: 16px;
-      // }
     }
   }
 
@@ -1484,67 +1522,67 @@
   }
 }
 
-.fixed-elipse1 {
-  position: absolute;
-  width: 700px;
-  height: 500px;
-  left: -40px;
-  bottom: 0;
-  background-color: $yellow;
-  opacity: 0.06;
-  filter: blur(250px);
-  transform: rotate(85.38deg);
-}
+// .fixed-elipse1 {
+//   position: absolute;
+//   width: 700px;
+//   height: 500px;
+//   left: -40px;
+//   bottom: 0;
+//   background-color: $yellow;
+//   opacity: 0.06;
+//   filter: blur(250px);
+//   transform: rotate(85.38deg);
+// }
 
-.fixed-elipse2 {
-  position: absolute;
-  width: 691px;
-  height: 680px;
-  left: 0;
-  bottom: 0;
-  background: $pink;
-  opacity: 0.06;
-  filter: blur(250px);
-  transform: rotate(90deg);
-}
+// .fixed-elipse2 {
+//   position: absolute;
+//   width: 691px;
+//   height: 680px;
+//   left: 0;
+//   bottom: 0;
+//   background: $pink;
+//   opacity: 0.06;
+//   filter: blur(250px);
+//   transform: rotate(90deg);
+// }
 
 
 
-.fixed-elipse {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
-  border: 1px solid #000000;
+// .fixed-elipse {
+//   position: absolute;
+//   border-radius: 50%;
+//   opacity: 0.1;
+//   border: 1px solid #000000;
 
-  &._3 {
-    width: 600px;
-    height: 600px;
-    right: -140px;
-    bottom: -500px;
-  }
+//   &._3 {
+//     width: 600px;
+//     height: 600px;
+//     right: -140px;
+//     bottom: -500px;
+//   }
 
-  &._4 {
-    width: 700px;
-    height: 700px;
-    right: -450px;
-    bottom: -100px;
-  }
+//   &._4 {
+//     width: 700px;
+//     height: 700px;
+//     right: -450px;
+//     bottom: -100px;
+//   }
 
-  &._5 {
-    width: 600px;
-    height: 600px;
-    right: -250px;
-    bottom: -350px;
-  }
+//   &._5 {
+//     width: 600px;
+//     height: 600px;
+//     right: -250px;
+//     bottom: -350px;
+//   }
 
-  &._6 {
-    width: 1224px;
-    height: 1224px;
-    top: -200px;
-    right: 30%;
-  }
-}
+//   &._6 {
+//     width: 1224px;
+//     height: 1224px;
+//     top: -200px;
+//     right: 30%;
+//   }
+// }
 
 .fixed-flow {
-  position: relative;
+  margin-bottom: 40px;
 }

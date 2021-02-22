@@ -40,9 +40,7 @@
     transition: opacity $hover-duration $timing;
     pointer-events: none;
 
-    @include d(575) {
-      width: 100vw;
-    }
+
 
     &.active {
       opacity: 1;
@@ -62,6 +60,10 @@
       background-color: $white;
       opacity: .6;
     }
+  }
+
+  @include d(575) {
+    width: 100vw;
   }
 
   &-list {

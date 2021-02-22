@@ -360,6 +360,38 @@ textarea {
   @include d(1199) {
     font-size: 18px;
   }
+
+  &_lg {
+    font-size: 72px;
+    font-weight: 600;
+    -webkit-text-fill-color: $blue;
+
+    @include d(1399) {
+      font-size: 60px;
+    }
+
+    @include d(1199) {
+      font-size: 44px;
+    }
+
+    @include d(991) {
+      font-size: 32px;
+    }
+
+    @include d(767) {
+      font-size: 26px;
+    }
+
+    span {
+      font-size: 22px;
+      @include gradientHor;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 400;
+
+    }
+  }
+
 }
 
 .btn {
@@ -643,4 +675,52 @@ textarea {
   display: block;
   width: 20px;
   margin-right: 20px;
+}
+
+.quote {
+  padding: 40px 60px;
+  position: relative;
+  font-size: 22px;
+
+  @include d(991) {
+    font-size: 18px;
+  }
+
+  @include d(767) {
+    font-size: 16px;
+  }
+
+  @include d(575) {
+    padding: 10px 50px;
+  }
+
+  &::before,
+  &::after {
+    font-family: "Lansserit", Arial, Helvetica, sans-serif;
+    font-size: 140px;
+    @include gradientHor;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    height: 50px;
+    line-height: 1;
+  }
+
+  &::before {
+    content: open-quote;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: close-quote;
+    bottom: 0;
+    right: 0;
+  }
+
+  p {
+    @include gradientHor;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

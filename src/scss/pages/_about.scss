@@ -1,9 +1,10 @@
 .hero-about {
-  padding-top: 103px;
+  padding-top: 140px;
+  padding-top: 240px;
   background-color: $heroBg;
 
-  @include m(1920) {
-    padding-top: 240px;
+  @include d(1440) {
+    padding-top: 103px;
   }
 
   @include d(1399) {
@@ -49,7 +50,8 @@
   @include d(1199) {
     right: 0;
   }
-   @include d(767) {
+
+  @include d(767) {
     right: 0;
     bottom: -20px;
   }
@@ -80,6 +82,10 @@
 
   &__text {
     margin-left: 80px;
+
+    p {
+      margin-bottom: 25px;
+    }
 
     @include d(1399) {
       margin-left: 0;

@@ -1,0 +1,108 @@
+.hero-connect {
+  @include d(1399) {
+    padding-top: 120px;
+  }
+
+  @include d(1199) {
+    padding-bottom: 0;
+  }
+
+  @include d(991) {
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1130px;
+    height: 620px;
+    left: 0;
+    top: 0;
+    background-color: $blue;
+    opacity: 0.15;
+    filter: blur(250px);
+    transform: rotate(-153.29deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 600px;
+    top: 0;
+    right: 0;
+
+    background-color: $pink;
+    opacity: 0.2;
+    filter: blur(242px);
+    transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
+  }
+}
+
+.contact {
+  padding: 100px 0;
+
+
+  @include d(991) {
+    padding: 40px 0;
+  }
+
+  &::before {
+    position: absolute;
+    width: 730px;
+    height: 550px;
+    top: 0;
+    right: 0;
+    background-color: $pink;
+    opacity: 0.04;
+    filter: blur(250px);
+    transform: rotate(135deg)
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1600px;
+    height: 530px;
+    left: -300px;
+    bottom: 0;
+    background: linear-gradient(268.96deg, #58CFFF 39.29%, #B7EAFF 86.35%);
+    opacity: 0.1;
+    filter: blur(250px);
+    transform: rotate(-22.77deg);
+  }
+
+  &__media {
+    position: relative;
+    z-index: 1;
+
+    .podcast-connect__box {
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    text-align: center;
+    margin-bottom: 70px;
+
+    .subtitle {
+      margin-bottom: 100px;
+
+      @include d(991) {
+        margin-bottom: 40px;
+      }
+    }
+
+    img {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 1;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}

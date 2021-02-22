@@ -1,0 +1,30 @@
+.hero-video {
+  padding-top: 122px;
+  background-color: $heroBg;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 600px;
+    right: 20%;
+    bottom: 0;
+    background-color: $blue;
+    opacity: 0.2;
+    filter: blur(242px);
+    transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
+  }
+}
+
+.podcast-video {
+  &__subtitle {
+    padding-left: 120px;
+    padding-bottom: 60px;
+
+    @include d(1399) {
+      padding-left: 0;
+    }
+  }
+}
