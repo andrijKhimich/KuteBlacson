@@ -58,7 +58,7 @@
 }
 
 .about-author {
-  padding: 180px 0 235px 0;
+  padding: 120px 0 120px 0;
 
   @include d(1199) {
     padding: 100px 0 120px;
@@ -93,7 +93,7 @@
   }
 
   &__media {
-    padding: 150px 0 152px 0;
+    padding: 100px 0 100px 0;
 
     @include d(1199) {
       padding: 80px 0;
@@ -305,7 +305,7 @@
 }
 
 .bliss {
-  padding: 235px 0 100px 0px;
+  padding: 130px 0 100px 0px;
 
   @include d(1199) {
     padding: 80px 0;
@@ -414,7 +414,7 @@
 }
 
 .philosophy {
-  padding: 120px 0 210px 0;
+  padding: 60px 0 100px 0;
   overflow: hidden;
 
   @include d(1199) {

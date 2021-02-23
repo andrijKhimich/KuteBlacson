@@ -608,6 +608,16 @@ textarea {
       }
     }
 
+    & .more-link__arrow_lg {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        left: 0;
+      }
+    }
+
   }
 
   i {
@@ -655,6 +665,32 @@ textarea {
       right: 0;
       bottom: 0;
       opacity: 0;
+    }
+
+    &_lg {
+      width: 91px;
+      height: 77px;
+      margin-left: 40px;
+
+      &::before {
+        background-image: url(../img/arrow-elipse_lg.svg);
+        width: 77px;
+        height: 77px;
+      }
+
+      &::after {
+        background-image: url(../img/arrow-elipse_white_lg.svg);
+        top: 35%;
+        left: -20px;
+        bottom: auto;
+        right: auto;
+        opacity: 1;
+        width: 55px;
+        height: 25px;
+        background-size: contain;
+        border-radius: none;
+        transition: left $hover-duration $timing;
+      }
     }
   }
 }

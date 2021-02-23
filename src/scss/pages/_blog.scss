@@ -42,7 +42,12 @@
   }
 
   &__title {
-    margin: 140px 0 100px 100px;
+    margin: 220px 0 100px 100px;
+
+    @include d(1440) {
+      margin: 120px 0 100px 100px;
+
+    }
 
     @include d(991) {
       margin: 80px 0;

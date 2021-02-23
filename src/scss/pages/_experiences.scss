@@ -72,11 +72,7 @@
 }
 
 .experiences-slider {
-  padding: 130px 0;
-
-  @include d(1399) {
-    padding: 100px 0;
-  }
+  padding: 100px 0;
 
   @include d(1199) {
     padding: 80px 0;

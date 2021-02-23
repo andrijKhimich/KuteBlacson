@@ -48,10 +48,10 @@
   }
 
   &__quote {
-    margin-bottom: 135px;
+    margin-bottom: 40px;
 
     @include d(991) {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 
@@ -71,12 +71,6 @@
   }
 
   &__bottom {
-    margin-top: 90px;
-
-    @include d(991) {
-      margin-top: 40px;
-    }
-
     p {
       margin-bottom: 40px;
     }
