@@ -111,7 +111,7 @@
     height: 630px;
     left: 0;
     top: 0;
-    background-color: $blue;
+    background-color: $orangeRed;
     opacity: 0.1;
     filter: blur(250px);
     transform: rotate(107.1deg);
@@ -168,18 +168,18 @@
       margin-left: 0;
     }
 
-    &::before {
-      content: "";
-      width: 80%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 45%;
-      transform: translate(-50%, 0);
-      @include gradientVert;
-      opacity: .1;
-      z-index: -1;
-    }
+    // &::before {
+    //   content: "";
+    //   width: 80%;
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 45%;
+    //   transform: translate(-50%, 0);
+    //   @include gradientVert;
+    //   opacity: .1;
+    //   z-index: -1;
+    // }
   }
 
   &__img {
@@ -212,23 +212,23 @@
   }
 
   &__social {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // flex: 0 0 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: absolute;
+    // bottom: 0;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 
-    @include d(1399) {
-      transform: translate(-50%, 0);
-    }
+    // @include d(1399) {
+    //   transform: translate(-50%, 0);
+    // }
 
     @include d(991) {
-      position: static;
-      transform: translate(0, 0);
-      margin: 0 auto;
+      // position: static;
+      // transform: translate(0, 0);
+      margin: 20px auto;
     }
 
     @include d(575) {
@@ -236,7 +236,7 @@
     }
 
     li {
-      margin-right: 40px;
+      // margin-right: 40px;
 
       @include d(575) {
         margin: 10px;
@@ -245,6 +245,28 @@
 
 
   }
+
+  &__video {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 45%;
+    @include d(767) {
+      padding-bottom: 60%;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      @include gradientVert;
+      opacity: .1;
+      z-index: -1;
+    }
+  }
+
 }
 
 .gift {
@@ -257,7 +279,7 @@
     height: 670px;
     right: 0;
     bottom: 0;
-    background-color: $blue;
+    background-color: $orangeRed;
     opacity: 0.1;
     filter: blur(250px);
     transform: rotate(57.6deg);
@@ -270,7 +292,7 @@
     height: 340px;
     right: 30%;
     bottom: 10%;
-    background-color: $pink;
+    background-color: $orange;
     opacity: 0.1;
     filter: blur(250px);
     transform: rotate(136.38deg);
@@ -459,7 +481,8 @@
   &_sm {
     width: 390px;
     height: 390px;
-    background-image: linear-gradient(to bottom, rgba($pink, .1), rgba($blue, .1));
+    background-image: linear-gradient(to left, rgba($orange, .1), rgba($orangeRed, .1));
+    // @include gradientHorOrange;
     margin: 140px auto 0 auto;
 
     &:hover {
@@ -620,7 +643,7 @@
       width: 100vw;
       max-height: 420px;
       height: 30%;
-      @include gradientHorBack;
+      @include gradientHorOrange;
       opacity: .1;
       position: absolute;
       top: 0;
@@ -714,5 +737,17 @@
     margin: -80px auto 0 auto;
     position: relative;
     z-index: 1;
+  }
+
+  &__video {
+    position: relative;
+    margin-top: 200px;
+    @include d(1399) {
+      margin-top: 120px;
+    }
+      @include d(991) {
+      margin-top: 40px;
+      margin-bottom: 100px;
+    }
   }
 }

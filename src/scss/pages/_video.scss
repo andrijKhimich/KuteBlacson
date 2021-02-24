@@ -16,6 +16,20 @@
     filter: blur(242px);
     transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
   }
+
+  &__img {
+    max-width: 460px;
+    position: absolute;
+    bottom: 0;
+
+    @include d(1100) {
+      max-width: 360px;
+    }
+    @include d(767) {
+      position: static;
+      margin: 0 auto;
+    }
+  }
 }
 
 .podcast-video {

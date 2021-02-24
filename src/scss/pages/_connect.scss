@@ -37,6 +37,14 @@
     filter: blur(242px);
     transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
   }
+  &__title {
+       margin: 100px 0 80px 80px;
+
+  }
+  &__img {
+    max-width: 680px;
+    margin: 0 auto;
+  }
 }
 
 .contact {

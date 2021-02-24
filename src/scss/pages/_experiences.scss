@@ -3,14 +3,15 @@
   background-color: $heroBg;
 
   @include d(1440) {
-    padding-top: 122px;
+    padding-top: 222px;
   }
 
   @include d(1399) {
-    padding-top: 60px;
+    padding-top: 100px;
   }
 
-  @include d(991) {
+  @include d(1199) {
+    padding-top: 190px;
     padding-bottom: 0;
   }
 
@@ -28,14 +29,15 @@
   }
 
   &__title {
-    margin: 130px 0 300px 110px;
-
+    margin: 130px 0 300px 80px;
+    position: relative;
+    z-index: 2;
     @include d(1440) {
-      margin: 130px 0 294px 110px;
+      margin: 130px 0 294px 80px;
     }
 
     @include d(1199) {
-      margin: 120px 0 0 0;
+      margin: 60px 0 0 0;
     }
 
     @include d(991) {
@@ -53,7 +55,9 @@
       position: absolute;
       bottom: 0;
       left: -80px;
-
+      @include d(1399) {
+        left: -20px;
+      }
       @include d(991) {
         position: static;
         width: 100%;

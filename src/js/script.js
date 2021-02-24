@@ -13,6 +13,8 @@ const blogSlider = $('#blogSlider');
 const menuBtn = $('#menuBtn');
 const nav = $('#nav');
 const partners = $('#partnerSlider');
+const aboutSlider = $('#aboutSlider');
+
 // const fixed = $('#target');
 
 
@@ -36,7 +38,21 @@ const partners = $('#partnerSlider');
 // const logoImg = document.querySelector('.logo img');
 // const logoSource = document.querySelector('.logo source');
 
-
+function initAboutSlider() {
+  $(aboutSlider).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    fade: true,
+    arrows: true,
+    adaptiveHeight: true,
+    prevArrow: $('#aboutPrev'),
+    nextArrow: $('#aboutNext'),
+    infinite: false,
+    autoplaySpeed: 10000
+  });
+}
 
 function initTestimonialsSlider() {
   $(testimonialsSlider).slick({
@@ -419,13 +435,17 @@ $(document).ready(function () {
   if (featuresEventsSlider.length) {
     initFeaturesEventsSlider();
   }
-  
+
   if (upcomingEventsSlider.length) {
     initUpcomingEventsSlider();
   }
   if (partners.length) {
     // console.log('lenght1')
     initPartnersSlider();
+  }
+  if (aboutSlider.length) {
+    initAboutSlider();
+
   }
   initTestimonialsSlider();
   // initBannerSlider();

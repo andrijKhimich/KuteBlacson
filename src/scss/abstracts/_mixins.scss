@@ -138,12 +138,23 @@
 @mixin gradientHor {
   background-image: linear-gradient(to right, #DE5B6F, #57CFFF);
 }
+
 @mixin gradientHorBack {
   background-image: linear-gradient(to right, #57CFFF, #DE5B6F);
 }
+
 @mixin gradientVert {
   background-image: linear-gradient(to bottom, #DE5B6F, #57CFFF);
 }
+
 @mixin gradientVertBack {
   background-image: linear-gradient(to top, #DE5B6F, #57CFFF);
+}
+
+@mixin gradientHorOrange {
+  background-image: linear-gradient(to left, #EDA315, #F84E38);
+}
+
+@mixin gradientHorOrangeBack {
+  background-image: linear-gradient(to right, #F84E38, #EDA315);
 }

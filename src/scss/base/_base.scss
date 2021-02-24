@@ -544,6 +544,10 @@ textarea {
     &:hover {
       transform: translate(-50%, 0) scale(.8);
     }
+
+    &_orange {
+      @include gradientHorOrange;
+    }
   }
 
   &-play_sm {
@@ -554,6 +558,28 @@ textarea {
     align-items: center;
     justify-content: center;
     @include gradientVert;
+  }
+
+  &_orange {
+    &::before {
+      background-image: url(../img/ellipse-orange.svg);
+    }
+
+    &::after {
+      @include gradientHorOrange;
+    }
+
+    span {
+      &:first-child {
+        @include gradientHorOrangeBack;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:last-child {
+        color: $white;
+      }
+    }
   }
 }
 

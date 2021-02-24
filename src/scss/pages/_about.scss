@@ -1,6 +1,5 @@
 .hero-about {
   padding-top: 140px;
-  padding-top: 240px;
   background-color: $heroBg;
 
   @include d(1440) {
@@ -12,7 +11,7 @@
   }
 
   &__img {
-    max-width: 480px;
+    max-width: 447px;
     margin: 0 auto;
   }
 
@@ -171,10 +170,11 @@
 
       @include d(1199) {
         right: 0;
+        bottom: 0;
       }
 
       @include d(575) {
-        bottom: -120px;
+        // bottom: -120px;
       }
     }
   }
@@ -305,7 +305,7 @@
 }
 
 .bliss {
-  padding: 130px 0 100px 0px;
+  padding: 80px 0 100px 0px;
 
   @include d(1199) {
     padding: 80px 0;
@@ -431,7 +431,7 @@
     width: 1140px;
     height: 1140px;
     left: 413px;
-    top: 340px;
+    top: 240px;
     opacity: 0.1;
     border: 1px solid #000000;
     border-radius: 50%;
@@ -498,10 +498,38 @@
       max-width: 100%;
       margin: 20px 0;
     }
+
+    &-book {
+      margin-top: 100px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 440px;
+        height: 630px;
+        left: -100px;
+        top: -100px;
+
+        background-color: $blue;
+        opacity: 0.2;
+        filter: blur(250px);
+        transform: rotate(90deg);
+      }
+
+      @include d(1440) {
+        max-width: 420px;
+      }
+
+      @include d(575) {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+    }
   }
 
   &__text {
-    padding: 112px 0 0 0;
+    padding: 60px 0 0 0;
     column-count: 3;
     column-gap: 120px;
     max-width: 1500px;
@@ -536,7 +564,35 @@
       color: #aaaaaa;
       position: absolute;
       bottom: 0;
-      right: -40px;
+      right: 0;
+    }
+  }
+}
+
+.about-slider {
+  &__nav {
+    height: 30px;
+    width: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    z-index: 1;
+
+    @include d(1399) {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-top: 20px;
+      margin-right: 100px;
+      margin-left: auto;
+    }
+
+    @include d(991) {
+      margin-right: 160px;
+    }
+
+    @include d(575) {
+      margin: 0 auto;
     }
   }
 }

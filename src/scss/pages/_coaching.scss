@@ -1,3 +1,79 @@
+.hero-coaching {
+  padding-top: 200px;
+  background-color: $heroBg;
+
+  @include d(1440) {
+    padding-top: 122px;
+  }
+
+  @include d(1399) {
+    padding-top: 100px;
+  }
+
+  @include d(1199) {
+    padding-top: 160px;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1630px;
+    height: 540px;
+    background: linear-gradient(268.96deg, #58CFFF 39.29%, #B7EAFF 86.35%);
+    opacity: .1;
+    filter: blur(250px);
+    transform: rotate(-22.77deg);
+  }
+
+  &__title {
+    margin: 130px 0 300px 80px;
+    position: relative;
+    z-index: 2;
+    @include d(1440) {
+      margin: 130px 0 294px 80px;
+    }
+
+    @include d(1199) {
+      margin: 60px 0 0 0;
+    }
+
+    @include d(991) {
+      margin: 60px 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 100%;
+
+    img {
+      max-width: 597px;
+      width: 137%;
+      position: absolute;
+      bottom: 0;
+      left: -80px;
+      @include d(1399) {
+        left: -20px;
+      }
+      @include d(991) {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__video {
+    margin-top: 80px;
+
+    @include d(991) {
+      margin: 80px 0 0 0;
+    }
+  }
+}
 .about-coaching {
   padding: 100px 0 20px 0;
 
