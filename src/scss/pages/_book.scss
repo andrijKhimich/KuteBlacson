@@ -167,19 +167,6 @@
     @include d(767) {
       margin-left: 0;
     }
-
-    // &::before {
-    //   content: "";
-    //   width: 80%;
-    //   position: absolute;
-    //   top: 0;
-    //   bottom: 0;
-    //   left: 45%;
-    //   transform: translate(-50%, 0);
-    //   @include gradientVert;
-    //   opacity: .1;
-    //   z-index: -1;
-    // }
   }
 
   &__img {
@@ -212,22 +199,10 @@
   }
 
   &__social {
-    // flex: 0 0 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: absolute;
-    // bottom: 0;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
 
-    // @include d(1399) {
-    //   transform: translate(-50%, 0);
-    // }
 
     @include d(991) {
-      // position: static;
-      // transform: translate(0, 0);
+
       margin: 20px auto;
     }
 
@@ -236,7 +211,6 @@
     }
 
     li {
-      // margin-right: 40px;
 
       @include d(575) {
         margin: 10px;
@@ -482,7 +456,6 @@
     width: 390px;
     height: 390px;
     background-image: linear-gradient(to left, rgba($orange, .1), rgba($orangeRed, .1));
-    // @include gradientHorOrange;
     margin: 140px auto 0 auto;
 
     &:hover {

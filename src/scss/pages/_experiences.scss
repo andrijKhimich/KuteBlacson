@@ -292,8 +292,6 @@
   }
 
   &__nav {
-    // margin-top: 73px;
-    // margin-left: 40px;
     height: 30px;
     width: 10px;
     position: relative;
@@ -301,17 +299,9 @@
     margin-left: auto;
     z-index: 1;
 
-    @include d(1199) {
-      // margin-top: 40px;
-      // margin-left: auto;
-      // margin-right: 60px;
-    }
-
     @include d(767) {
       margin-right: 200px;
       display: none;
-      // margin-top: 20px;
-      // margin-right: 140px;
     }
   }
 }
