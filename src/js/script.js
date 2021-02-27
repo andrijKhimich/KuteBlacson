@@ -1,7 +1,6 @@
 const body = $('body');
 const mainWrapper = $('.main-wrapper');
 const testimonialsSlider = $('#testimonialsSlider');
-// const bannerSlider = document.querySelector('#bannerSlider');
 const meditationSlider = $('#meditationSlider');
 const experianceSlider = $('#experianceSlider');
 const featuresEventsSlider = $('#featuresEventsSlider');
