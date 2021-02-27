@@ -62,11 +62,18 @@
 
 .blog-card {
   &__img {
-    max-width: 185px;
+    max-width: 300px;
     margin-bottom: 30px;
+    max-height: 185px;
+    overflow: hidden;
 
     @include d(575) {
       margin: 0 auto 20px auto;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
