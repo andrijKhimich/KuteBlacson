@@ -144,7 +144,7 @@ gulp.task("webp", function () {
     .src("src/img/**/*.*")
     .pipe(
       webp({
-        quality: 70,
+        quality: 90,
       })
     )
     .pipe(gulp.dest("dist/img/"))

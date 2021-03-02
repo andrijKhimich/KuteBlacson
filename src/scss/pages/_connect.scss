@@ -1,6 +1,7 @@
 .hero-connect {
-  @include d(1399) {
-    padding-top: 120px;
+  padding-top: 187px;
+  @include d(1440) {
+    padding-top: 111px;
   }
 
   @include d(1199) {
@@ -37,13 +38,18 @@
     filter: blur(242px);
     transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
   }
+
   &__title {
-       margin: 100px 0 80px 80px;
+    margin: 100px 0 80px 80px;
 
   }
+
   &__img {
-    max-width: 680px;
+    max-width: 800px;
     margin: 0 auto;
+    @include d(1440) {
+      max-width: 680px;
+    }
   }
 }
 

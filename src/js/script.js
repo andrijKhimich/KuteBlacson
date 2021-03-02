@@ -3,8 +3,8 @@ const mainWrapper = $('.main-wrapper');
 const testimonialsSlider = $('#testimonialsSlider');
 const meditationSlider = $('#meditationSlider');
 const experianceSlider = $('#experianceSlider');
-const featuresEventsSlider = $('#featuresEventsSlider');
-const upcomingEventsSlider = $('#upcomingEventsSlider');
+// const featuresEventsSlider = $('#featuresEventsSlider');
+// const upcomingEventsSlider = $('#upcomingEventsSlider');
 
 
 const storeSlider = $('#storeSlider');
@@ -134,8 +134,10 @@ function initHelpSlider() {
     fade: false,
     arrows: false,
     infinite: true,
-    autoplaySpeed: 10000,
-    adaptiveHeight: true
+    autoplaySpeed: 5000,
+    adaptiveHeight: true,
+    pauseOnFocus: false,
+    pauseOnHover: false
   });
 }
 
@@ -265,14 +267,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function initExperianceSlider() {
-  // const counter = document.querySelector('#experianceSliderInfo');
-  // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  //   if (!slick.$dots) {
-  //     return;
-  //   }
-  //   let i = (currentSlide ? currentSlide : 0) + 1;
-  //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
-  // });
 
   $(experianceSlider).slick({
     slidesToShow: 1,
@@ -283,74 +277,73 @@ function initExperianceSlider() {
     fade: false,
     arrows: true,
     prevArrow: $('#experiencesPrev'),
-    nextArrow: $('#experiencesNext')
-    // responsive: [{
-    //   breakpoint: 991,
-    //   settings: {
-    //     adaptiveHeight: true
-    //   }
-    // }]
+    nextArrow: $('#experiencesNext'),
+    autoplay: true,
+    autoplaySpeed: 5000,
+    adaptiveHeight: true,
+    pauseOnFocus: false,
+    pauseOnHover: false
   });
 }
 
 
-function initFeaturesEventsSlider() {
-  // const counter = document.querySelector('#experianceSliderInfo');
-  // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  //   if (!slick.$dots) {
-  //     return;
-  //   }
-  //   let i = (currentSlide ? currentSlide : 0) + 1;
-  //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
-  // });
+// function initFeaturesEventsSlider() {
+//   // const counter = document.querySelector('#experianceSliderInfo');
+//   // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+//   //   if (!slick.$dots) {
+//   //     return;
+//   //   }
+//   //   let i = (currentSlide ? currentSlide : 0) + 1;
+//   //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
+//   // });
 
-  $(featuresEventsSlider).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // dots: true,
-    infinite: false,
-    // speed: 800,
-    fade: false,
-    arrows: true,
-    prevArrow: $('#featuresPrev'),
-    nextArrow: $('#featuresNext')
-    // responsive: [{
-    //   breakpoint: 991,
-    //   settings: {
-    //     adaptiveHeight: true
-    //   }
-    // }]
-  });
-}
+//   $(featuresEventsSlider).slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     // dots: true,
+//     infinite: false,
+//     // speed: 800,
+//     fade: false,
+//     arrows: true,
+//     prevArrow: $('#featuresPrev'),
+//     nextArrow: $('#featuresNext')
+//     // responsive: [{
+//     //   breakpoint: 991,
+//     //   settings: {
+//     //     adaptiveHeight: true
+//     //   }
+//     // }]
+//   });
+// }
 
-function initUpcomingEventsSlider() {
-  // const counter = document.querySelector('#experianceSliderInfo');
-  // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  //   if (!slick.$dots) {
-  //     return;
-  //   }
-  //   let i = (currentSlide ? currentSlide : 0) + 1;
-  //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
-  // });
+// function initUpcomingEventsSlider() {
+//   // const counter = document.querySelector('#experianceSliderInfo');
+//   // $(experianceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+//   //   if (!slick.$dots) {
+//   //     return;
+//   //   }
+//   //   let i = (currentSlide ? currentSlide : 0) + 1;
+//   //   counter.innerHTML = '<span class="slider__number">' + i + '</span>' + '/' + (slick.$dots[0].children.length);
+//   // });
 
-  $(upcomingEventsSlider).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // dots: true,
-    infinite: false,
-    // speed: 800,
-    fade: false,
-    arrows: true,
-    prevArrow: $('#upcomingPrev'),
-    nextArrow: $('#upcomingNext')
-    // responsive: [{
-    //   breakpoint: 991,
-    //   settings: {
-    //     adaptiveHeight: true
-    //   }
-    // }]
-  });
-}
+//   $(upcomingEventsSlider).slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     // dots: true,
+//     infinite: false,
+//     // speed: 800,
+//     fade: false,
+//     arrows: true,
+//     prevArrow: $('#upcomingPrev'),
+//     nextArrow: $('#upcomingNext')
+//     // responsive: [{
+//     //   breakpoint: 991,
+//     //   settings: {
+//     //     adaptiveHeight: true
+//     //   }
+//     // }]
+//   });
+// }
 // function initPracticeSlider() {
 //   const counter = document.querySelector('#practiceSliderInfo');
 //   $(practiceSlider).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -434,13 +427,13 @@ $(document).ready(function () {
     initExperianceSlider();
   }
 
-  if (featuresEventsSlider.length) {
-    initFeaturesEventsSlider();
-  }
+  // if (featuresEventsSlider.length) {
+  //   initFeaturesEventsSlider();
+  // }
 
-  if (upcomingEventsSlider.length) {
-    initUpcomingEventsSlider();
-  }
+  // if (upcomingEventsSlider.length) {
+  //   initUpcomingEventsSlider();
+  // }
   if (partners.length) {
     // console.log('lenght1')
     initPartnersSlider();

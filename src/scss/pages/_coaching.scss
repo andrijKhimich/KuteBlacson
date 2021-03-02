@@ -1,5 +1,5 @@
 .hero-coaching {
-  padding-top: 200px;
+  padding-top: 294px;
   background-color: $heroBg;
 
   @include d(1440) {
@@ -32,6 +32,7 @@
     margin: 130px 0 300px 80px;
     position: relative;
     z-index: 2;
+
     @include d(1440) {
       margin: 130px 0 294px 80px;
     }
@@ -50,14 +51,16 @@
     height: 100%;
 
     img {
-      max-width: 597px;
-      width: 137%;
+      max-width: 697px;
       position: absolute;
       bottom: 0;
       left: -80px;
-      @include d(1399) {
-        left: -20px;
+      width: 150%;
+
+      @include d(1440) {
+        max-width: 497px;
       }
+
       @include d(991) {
         position: static;
         width: 100%;
@@ -74,6 +77,7 @@
     }
   }
 }
+
 .about-coaching {
   padding: 100px 0 20px 0;
 
@@ -223,7 +227,7 @@
 }
 
 .letter {
-  padding: 5px 0 100px 0;
+  padding: 5px 0 20px 0;
 
   &__text {
     padding-top: 60px;

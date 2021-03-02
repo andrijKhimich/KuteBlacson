@@ -1,5 +1,5 @@
 .hero-video {
-  padding-top: 122px;
+  padding-top: 177px;
   background-color: $heroBg;
   overflow: hidden;
   position: relative;
@@ -17,17 +17,35 @@
     transform: matrix(0.4, 0.91, -0.93, 0.38, 0, 0);
   }
 
+  @include d(1440) {
+    padding-top: 117px;
+  }
+
   &__img {
-    max-width: 460px;
-    position: absolute;
-    bottom: 0;
+    width: 560px;
+    margin: 30px auto 0 auto;
+
+    @include d(1440) {
+
+      width: 460px;
+    }
 
     @include d(1100) {
-      max-width: 360px;
+      width: 360px;
     }
+
     @include d(767) {
       position: static;
       margin: 0 auto;
+    }
+  }
+
+  &__title {
+    padding: 0;
+    margin-left: 100px;
+
+    @include d(991) {
+      margin-left: 0;
     }
   }
 }

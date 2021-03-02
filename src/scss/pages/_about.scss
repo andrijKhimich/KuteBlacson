@@ -1,9 +1,9 @@
 .hero-about {
-  padding-top: 140px;
+  padding-top: 103px;
   background-color: $heroBg;
 
   @include d(1440) {
-    padding-top: 103px;
+    padding-top: 87px;
   }
 
   @include d(1399) {
@@ -11,8 +11,16 @@
   }
 
   &__img {
-    max-width: 447px;
-    margin: 0 auto;
+    max-width: 575px;
+    margin: 40px auto 0 auto;
+
+    @include d(1440) {
+      max-width: 447px;
+    }
+
+    @include d(991) {
+      margin: 0 auto;
+    }
   }
 
   &__title {
@@ -555,8 +563,7 @@
       margin-bottom: 25px;
     }
 
-    &::after {
-      content: attr(data-author);
+    &-signed {
       color: #aaaaaa;
       position: absolute;
       bottom: 0;

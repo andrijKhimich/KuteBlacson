@@ -1,6 +1,10 @@
 .hero-speaking {
-  padding-top: 40px;
+  padding-top: 97px;
   background-color: $heroBg;
+
+  @include d(1440) {
+    padding-top: 40px;
+  }
 
   &::before {
     content: "";
@@ -41,9 +45,19 @@
   }
 
   &__img {
-    max-width: 520px;
+    max-width: 580px;
+
+    @include d(1440) {
+      max-width: 490px;
+    }
+
+    @include d(1199) {
+      position: absolute;
+      bottom: 0;
+    }
 
     @include d(991) {
+      position: static;
       margin: 0 auto;
     }
   }
@@ -51,13 +65,15 @@
 
 .speaking-gift {
   padding: 100px 0;
-    @include d(991) {
+
+  @include d(991) {
     padding: 60px 0;
   }
 
   @include d(767) {
     padding: 40px 0;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -154,6 +170,7 @@
   bottom: 210px;
   font-weight: bold;
   left: -400px;
+  white-space: nowrap;
 }
 
 .speaking-quote {

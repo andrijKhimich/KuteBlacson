@@ -1,8 +1,12 @@
 .hero-podcast {
-  padding-top: 122px;
+  padding-top: 154px;
   background-color: $heroBg;
   overflow: hidden;
   z-index: 1;
+
+  @include d(1440) {
+    padding-top: 87px;
+  }
 
   &::before {
     content: "";
@@ -44,8 +48,13 @@
   }
 
   &__img {
-    max-width: 544px;
+    max-width: 644px;
     margin: 0 auto;
+
+    @include d(1440) {
+      max-width: 544px;
+
+    }
   }
 
   &__btn {
@@ -214,9 +223,8 @@
 
   &__social {
     position: relative;
-    padding: 135px 0 40px 120px;
+    padding: 70px 0 56px 75px;
     height: 100%;
-
     @include d(991) {
       padding: 40px 0 40px 0;
     }

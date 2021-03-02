@@ -335,13 +335,17 @@ textarea {
 
 .subtitle {
   display: inline-block;
-  font-size: 22px;
+  font-size: 28px;
   @include gradientHor;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  @include d(1440) {
+    font-size: 24px;
+  }
+
   @include d(1199) {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   &_lg {
@@ -708,7 +712,11 @@ textarea {
   display: flex;
   align-items: center;
   color: $pink;
-  font-size: 14px;
+  font-size: 18px;
+
+  @include d(1440) {
+    font-size: 16px;
+  }
 
   picture {
     width: 20px;
