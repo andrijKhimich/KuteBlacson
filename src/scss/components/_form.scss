@@ -1,4 +1,25 @@
 .form {
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -15px;
+
+    .form-box {
+      flex: 0 0 50%;
+      padding: 0 15px;
+
+      &::before {
+        display: none;
+      }
+
+      .form-label {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
   &-box {
     position: relative;
     padding-bottom: 5px;
@@ -30,7 +51,55 @@
     background-color: transparent;
     line-height: 40px;
   }
+
+  &-radio {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid $blue;
+    display: block;
+    margin-right: 15px;
+    position: relative;
+    transition: border .2s $timing;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      background-image: url(../img/check.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity .2s $timing;
+    }
+  }
 }
+
+.input-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+
+  &:checked~.form-radio {
+    border: 1px solid $pink;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+
 
 .contact-form {
   position: relative;
