@@ -11,6 +11,8 @@ const partners = $('#partnerSlider');
 const aboutSlider = $('#aboutSlider');
 const helpSlider = $('#helpSlider');
 const bookPartners = $('#partners');
+const btnUp = $('#btnUp');
+
 
 function initAboutSlider() {
   $(aboutSlider).slick({
@@ -103,15 +105,17 @@ function initHelpSlider() {
   $(helpSlider).slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     dots: false,
     fade: false,
-    arrows: false,
     infinite: true,
     autoplaySpeed: 5000,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     pauseOnFocus: false,
-    pauseOnHover: false
+    pauseOnHover: false,
+    arrows: true,
+    prevArrow: $('#helpPrev'),
+    nextArrow: $('#helpNext'),
   });
 }
 
@@ -191,6 +195,12 @@ testWebP(function (support) {
 });
 
 $(document).ready(function () {
+
+  btnUp.click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 400);
+  });
 
   showContent();
   if (experianceSlider.length) {
@@ -293,6 +303,11 @@ $(document).ready(function () {
     const scrollValue = $(this).scrollTop();
     showOnScroll(scrollValue);
     scrollValue >= 1 ? closeMenu() : null;
+    if (scrollValue >= 100) {
+      btnUp.css('opacity', '1');
+    } else {
+      btnUp.css('opacity', '0');
+    }
   });
 
   $(window).resize(function () {

@@ -568,6 +568,22 @@ textarea {
       }
     }
   }
+
+  &_up {
+    position: fixed;
+    z-index: 20;
+    bottom: 40px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity $hover-duration $timing;
+
+    &::before {
+      background-color: #fff;
+    }
+  }
 }
 
 .round-img {
@@ -712,10 +728,14 @@ textarea {
   display: flex;
   align-items: center;
   color: $pink;
-  font-size: 18px;
+  font-size: 22px;
 
   @include d(1440) {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  @include d(1199) {
+    font-size: 18px;
   }
 
   picture {

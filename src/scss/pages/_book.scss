@@ -167,6 +167,10 @@
 .book-descr {
   padding-top: 40px;
 
+  .order-video__banner {
+    margin: 0 auto;
+  }
+
   &__row {
     margin-left: 80px;
     display: flex;
@@ -247,7 +251,7 @@
     position: relative;
     max-width: 1080px;
     margin: 0 auto;
-    padding-bottom: 45%;
+    padding-bottom: 35%;
 
     @include d(767) {
       padding-bottom: 60%;
@@ -382,15 +386,36 @@
   align-items: center;
   margin-left: 80px;
 
+  @include d(1199) {
+    margin: 0;
+  }
+
+  @include d(991) {
+    flex-direction: column;
+  }
+
   &__banner {
     max-width: 790px;
+
+    .btn-play {
+      transform: translate(-50%, -50%) scale(1);
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(.8);
+
+      }
+    }
+
+    @include d(991) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .btn-order {
   display: block;
-  width: 360px;
-  height: 360px;
+  width: 300px;
+  height: 300px;
   background-color: $white;
   border-radius: 50%;
   white-space: normal;
@@ -401,14 +426,14 @@
   z-index: 1;
 
   @include d(1199) {
-    width: 320px;
-    height: 320px;
+    width: 240px;
+    height: 240px;
     margin-top: -40px;
   }
 
   @include d(991) {
-    width: 180px;
-    height: 180px;
+    // width: 120px;
+    // height: 120px;
     margin-top: 0;
     margin: 0 auto;
   }
@@ -458,7 +483,7 @@
     z-index: 2;
     top: 50%;
     left: 50%;
-    width: 30%;
+    width: 60%;
     transform: translate(-50%, -50%);
 
     // @include gradientHor;
@@ -706,17 +731,17 @@
     flex-wrap: wrap;
     position: relative;
 
-    &::before {
-      content: "";
-      width: 100vw;
-      // max-height: 420px;
-      height: 360px;
-      @include gradientHorOrange;
-      opacity: .1;
-      position: absolute;
-      top: 0;
-      left: -10vw;
-    }
+    // &::before {
+    //   content: "";
+    //   width: 100vw;
+    //   // max-height: 420px;
+    //   height: 360px;
+    //   @include gradientHorOrange;
+    //   opacity: .1;
+    //   position: absolute;
+    //   top: 0;
+    //   left: -10vw;
+    // }
   }
 
   &__card {
@@ -810,10 +835,18 @@
 
   &__img {
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 95px;
 
     // max-height: 600px;
     // overflow: hidden;
+    @include d(1399) {
+      margin-top: 90px;
+    }
+
+    @include d(1199) {
+      margin-top: 80px;
+    }
+
     @include d(991) {
       margin: 0 auto 80px auto;
     }

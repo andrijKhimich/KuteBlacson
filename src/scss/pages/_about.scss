@@ -380,32 +380,32 @@
   }
 
   &__row {
-    display: flex;
-    justify-content: flex-start;
+    // display: flex;
+    // justify-content: flex-start;
 
     @include d(575) {
-      display: block;
+      // display: block;
     }
 
-    picture,
-    img {
-      flex: 0 0 190px;
-      max-width: 190px;
-      margin-right: 88px;
+    // picture,
+    // img {
+    //   flex: 0 0 190px;
+    //   max-width: 190px;
+    //   margin-right: 88px;
 
-      @include d(1199) {
-        margin-right: 30px;
-      }
+    //   @include d(1199) {
+    //     margin-right: 30px;
+    //   }
 
-      @include d(575) {
-        margin-right: 0;
-        margin-bottom: 30px;
-      }
-    }
+    //   @include d(575) {
+    //     margin-right: 0;
+    //     margin-bottom: 30px;
+    //   }
+    // }
   }
 
   &__text {
-    max-width: 370px;
+    max-width: 700px;
 
     @include d(767) {
       max-width: 100%;
