@@ -176,7 +176,22 @@
 }
 
 .logo {
-  max-width: 180px;
+  flex: 0 0 240px;
   position: relative;
   z-index: 1;
+
+  @include d(767) {
+    flex: 0 0 220px;
+  }
+}
+
+.humburger-box {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  .humburger {
+    margin-left: 20px;
+  }
 }

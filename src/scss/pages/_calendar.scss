@@ -199,7 +199,9 @@
     top: -120px;
     left: -120px;
     text-transform: uppercase;
-
+      @include gradientHor;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     @include d(1199) {
       width: 160px;
       height: 160px;
@@ -251,7 +253,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 100%;
+      width: 110%;
       height: 100%;
       top: 0;
       left: 0;

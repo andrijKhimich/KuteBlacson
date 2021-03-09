@@ -6,6 +6,8 @@ const experianceSlider = $('#experianceSlider');
 const storeSlider = $('#storeSlider');
 const blogSlider = $('#blogSlider');
 const menuBtn = $('#menuBtn');
+const menuBox = $('#menuBox');
+
 const nav = $('#nav');
 const partners = $('#partnerSlider');
 const aboutSlider = $('#aboutSlider');
@@ -120,6 +122,7 @@ function initHelpSlider() {
 }
 
 function openMenu() {
+  menuBox.addClass('active');
   menuBtn.addClass('active');
   nav.addClass('active');
   body.css({
@@ -128,6 +131,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+  menuBox.removeClass('active');
   menuBtn.removeClass('active');
   nav.removeClass('active');
   body.css({
@@ -147,7 +151,7 @@ function showContent() {
 
 document.addEventListener("DOMContentLoaded", function () {
   // toggle main menu
-  menuBtn.click(function () {
+  menuBox.click(function () {
     if (this.classList.contains("active")) {
       closeMenu();
     } else {
